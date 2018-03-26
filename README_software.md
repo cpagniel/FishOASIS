@@ -27,6 +27,12 @@ sudo reboot
 When asked to remove fake-hwclock package and disable ntpd deamon, choose yes ("Y"). 
 When asked to install the QT5 option (i.e., wittyPi GUI), choose no ("N").
 
+For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).
+
+After the wittyPi software is installed, shutdown the RPi using the command `sudo shutdown -h now`. Mount the wittyPi onto the RPi (while the RPi is off).
+
+Test 
+
 ### gphoto2
 ```
 cd /home/pi
