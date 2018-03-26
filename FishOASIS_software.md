@@ -44,4 +44,4 @@ sudo echo "2" | ./gphoto2-updater.sh
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Edit: 03/25/2018
+Last Modification: 03/25/2018
