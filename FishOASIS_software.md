@@ -12,7 +12,7 @@ sudo apt-get update
 ### Git
 Second, install Git. When asked, choose yes ("Y") to install this package.
 ```
-sudo apt-get install git
+sudo echo "Y" | apt-get install git
 sudo reboot
 ```
 
