@@ -6,17 +6,21 @@ A microSD card adapter will be needed to read the microSD card.
 
 ### Using Windows
 Format the microSD card in FAT32 using SD Card Formatter.  
+
 <img src="/software/images/SD_Card_Formatter_Windows1.png" width="40%"> 
 
 In Option, Select "Full (Erase)" for Format Type and turn "ON" Format Size Adjustment.  
+
 <img src="/software/images/SD_Card_Formatter_Windows2.png" width="20%">
 
 ### Using Mac
-Erase the contents on the microSD card using SD Card Formatter. Use Quick Format to ensure all the disk space is available.
+Erase the contents on the microSD card using SD Card Formatter. Use Quick Format to ensure all the disk space is available.  
+
 <img src="/software/images/SD_Card_Formatter_Mac.png" width="40%">
 
-Use Disk Utility to format the microSD card in MS-DOS (FAT32) or MS-DOS(FAT).
-<img src="/software/images/Disk_Utility.png" width="40%">
+Use Disk Utility to format the microSD card in MS-DOS (FAT32) or MS-DOS(FAT).  
+
+<img src="/software/images/Disk_Utility_MAC.png" width="40%">
 
 ## Flash Raspbian Stretch Lite Image
 
