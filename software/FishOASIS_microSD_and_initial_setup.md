@@ -8,7 +8,7 @@ Format the microSD card in FAT32 (or MS-DOS FAT) using SD Card Formatter. A micr
 
 ### Using Mac
 
-![](/software/images/SD_Card_Formatter_Mac.png | width=100)
+<img src="/software/images/SD_Card_Formatter_Mac.png" width="40%">
 
 ## Downloads
 
