@@ -14,8 +14,7 @@ sudo apt-get update
 ### Git
 Second, install Git. When asked, choose yes ("Y") to install this package.
 ```
-sudo echo "Y" | sudo apt-get install git
-sudo reboot
+sudo echo "Y" | sudo apt-get install git | sudo reboot
 ```
 
 ### wittyPi
@@ -23,8 +22,7 @@ Third, install wittyPi package. The wittyPi should **NOT** be attached to the RP
 ```
 cd /home/pi
 sudo wget http://www.uugear.com/repo/WittyPi2/installWittyPi.sh
-sudo echo "Y N" | sudo sh installWittyPi.sh
-sudo reboot
+sudo echo "Y N" | sudo sh installWittyPi.sh | sudo reboot
 ```
 When asked to remove fake-hwclock package and disable ntpd deamon, choose yes ("Y"). 
 When asked to install the QT5 option (i.e., wittyPi GUI), choose no ("N").
@@ -46,4 +44,4 @@ sudo echo "2" | sudo ./gphoto2-updater.sh
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 03/25/2018
+Last Modification: 06/10/2018
