@@ -28,10 +28,28 @@ Use Etcher to flash the Raspbian Stretch Lite image onto the microSD card. Etche
 
 <img src="/software/images/Etcher.png" width="40%">
 
+## Configure Initial Setting of RPi
+
+While the RPi is off and unplugged, insert the formatted microSD card in the RPi. Make sure that a keyboard and screen are plugged into the RPi before turning on the RPi.
+
+Turn on the RPi. If asked to log in:
+```
+raspberrypi login: pi
+password: raspberry
+```
+
+Access the software configuration tool using:
+```
+sudo raspi-config
+```
+
+Use the menu to change the following settings:
+
+
 ## Downloads
 
 [Click here](https://www.sdcard.org/downloads/formatter_4/) to download SD Card Formatter.  
-[Click here](https://etcher.io/) to download Etcher. 
+[Click here](https://etcher.io/) to download Etcher.  
 [Click here](https://www.raspberrypi.org/downloads/raspbian/) to download Raspbian Stretch Lite Image. 
 
 ## Author
