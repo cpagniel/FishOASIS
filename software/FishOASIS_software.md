@@ -1,6 +1,8 @@
 # FishOASIS Software Installation Instructions
 Installation instructions for software needed on Raspberry Pi A+ for FishOASIS.
 
+Note: Before installing the packages below, please ensure that your microSD card has been properly formatted and you have completed the initial setup of the RPi. Instructions for formatting the microSD card and the initial setup of the RPi can be found [here](/FishOASIS_microSD_and_initial_setup.md).
+
 ## Install Packages
 Additional packages have to be installed because the Raspbian OS Stretch Lite was used. Use the USB ethernet adapter to connect the RPi to the internet. 
 
