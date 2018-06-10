@@ -5,10 +5,9 @@ Formatting instructions for microSD card as well as configuration of initial set
 A microSD card adapter will be needed to read the microSD card. 
 
 ### Using Windows
-Format the microSD card in FAT32 using SD Card Formatter. Select "Full (Erase)" and turn "ON" format size adjustment.
+Format the microSD card in FAT32 using SD Card Formatter. In Option, Select "Full (Erase)" and turn "ON" format size adjustment.
 
-<img src="/software/images/SD_Card_Formatter_Windows1.png" width="40%">
-<img src="/software/images/SD_Card_Formatter_Windows2.png" width="40%">
+<img src="/software/images/SD_Card_Formatter_Windows1.png" width="40%"> <img src="/software/images/SD_Card_Formatter_Windows2.png" width="40%">
 
 ### Using Mac
 
