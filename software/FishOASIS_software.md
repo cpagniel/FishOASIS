@@ -56,6 +56,52 @@ gphoto2
 ```
 This should thow an error, showing you a list of valid options.
 
+## Configure USB Mount Location
+
+Create a directory to which a USB can be mounted to:
+```
+cd /media
+sudo mkdir DATA
+sudo chown -R pi:pi /media/DATA
+```
+
+Insert a USB stick and verify that it is identified by the system using `ls -l /dev/disk/by-uuid/`. USBs should be labeled sda1, sdb1, sdc1 etc.
+
+Mount the USB using the command:
+```
+sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
+```
+
+Verify that the contents of the USB are visible using `cd /media/DATA && ls`.
+
+To unmount the USB, use the command 
+```
+sudo umount /media/DATA
+```
+
+## Download the FishOASIS .sh Scripts
+
+
+
+### 
+
+## Potential Errors
+
+## timelapse.sh does not exist
+
+If you get an error that says timelapse.sh does not exist, it is likely an issue with the document format. You’ll need to translate the timelapse.sh file to the correct format. Try the following fix from inside the gphoto2 folder:
+```
+tr –d “\015” < timelapse.sh > timelapse2.sh
+chmod +x timelapse2.sh
+sudo ./timelapse2.sh
+```
+
+If this runs the timelapse program, remove the old version and rename the new so it can be called by the .bashrc:
+```
+rm timelapse.sh
+mv timelapse2.sh timelapse.sh
+```
+
 ## Additional Information
 
 For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).
