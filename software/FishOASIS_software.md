@@ -34,7 +34,16 @@ For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2
 
 After the wittyPi software is installed, shutdown the RPi using the command `sudo shutdown -h now`. Mount the wittyPi onto the RPi (while the RPi is off).
 
-Test 
+Test to ensure that the wittyPi package is installed and working by scheduling a shutdown and startup.
+```
+cd wittyPi
+sudo ./wittyPi.sh
+```
+Select `1. Write system time to RTC`. This will write the system time (set via the internet connection) to the RTC on the wittyPi.  
+Select `6. Choose schedule script`. Select the pre-loaded script called `on_5m_every_20m`. 
+Exit the wittyPi.sh program by selecting `8. Exit`.  
+
+Shutdown the RPi using the command `sudo shutdown -h now` and wait for the RPi to startup again. Deselect the schedule script in the wittyPi.sh program before continuing with the installation of the next package.
 
 ### gphoto2
 Fourth, install gphoto2 package. Installing this package will take a long time (i.e., a few hours). Ensure that you have a secure internet connection. If the internet is disconnected at any point during the install, it will fail.  If the screen goes black, it has gone to sleep. This does not stop the install. Tap the space bar to wake it up, if desired. 
