@@ -40,7 +40,9 @@ cd wittyPi
 sudo ./wittyPi.sh
 ```
 Select `1. Write system time to RTC`. This will write the system time (set via the internet connection) to the RTC on the wittyPi.  
+
 Select `6. Choose schedule script`. Select the pre-loaded script called `on_5m_every_20m`. 
+
 Exit the wittyPi.sh program by selecting `8. Exit`.  
 
 Shutdown the RPi using the command `sudo shutdown -h now` and wait for the RPi to startup again. Deselect the schedule script in the wittyPi.sh program before continuing with the installation of the next package.
