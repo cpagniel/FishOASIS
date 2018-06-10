@@ -2,9 +2,13 @@
 Formatting instructions for microSD card as well as configuration of initial settings of the Raspberry Pi A+.
 
 ## Format microSD card using SD Card Formatter
+A microSD card adapter will be needed to read the microSD card. 
 
 ### Using Windows
-Format the microSD card in FAT32 (or MS-DOS FAT) using SD Card Formatter. A microSD card adapter will be needed to read the microSD card. Select "Full (Erase)" and turn on format size adjustment.
+Format the microSD card in FAT32 using SD Card Formatter. Select "Full (Erase)" and turn "ON" format size adjustment.
+
+<img src="/software/images/SD_Card_Formatter_Windows1.png" width="40%">
+<img src="/software/images/SD_Card_Formatter_Windows2.png" width="40%">
 
 ### Using Mac
 
