@@ -20,7 +20,7 @@ Erase the contents on the microSD card using SD Card Formatter. Use Quick Format
 
 Use Disk Utility to format the microSD card in MS-DOS (FAT32) or MS-DOS(FAT).  
 
-<img src="/software/images/Disk_Utility_MAC.png" width="40%">
+<img src="/software/images/Disk_Utility_Mac.png" width="40%">
 
 ## Flash Raspbian Stretch Lite Image
 
