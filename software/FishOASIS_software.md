@@ -12,11 +12,12 @@ sudo apt-get update
 ```
 
 ### Git
-Second, install Git. When asked, choose yes ("Y") to install this package.
+Second, install Git. 
 ```
 sudo echo "Y" | sudo apt-get install git
 sudo reboot
 ```
+Yes ("Y") will be selected when asked to install this package.
 
 ### wittyPi
 Third, install wittyPi package. The wittyPi should **NOT** be attached to the RPi during installation.
@@ -26,8 +27,8 @@ sudo wget http://www.uugear.com/repo/WittyPi2/installWittyPi.sh
 sudo echo "Y N" | sudo sh installWittyPi.sh 
 sudo reboot
 ```
-When asked to remove fake-hwclock package and disable ntpd deamon, choose yes ("Y"). 
-When asked to install the QT5 option (i.e., wittyPi GUI), choose no ("N").
+Yes ("Y") will be selected when asked to remove fake-hwclock package and disable ntpd deamon. 
+No ("N") will be selected when asked to install the QT5 option (i.e., wittyPi GUI).
 
 For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).
 
@@ -36,6 +37,7 @@ After the wittyPi software is installed, shutdown the RPi using the command `sud
 Test 
 
 ### gphoto2
+Fourth, install gphoto2 package. Installing this package will take a long time (i.e., a few hours). Ensure that you have a secure internet connection. If the internet is disconnected at any point during the install, it will fail.  If the screen goes black, it has gone to sleep. This does not stop the install. Tap the space bar to wake it up, if desired. 
 ```
 cd /home/pi
 wget https://raw.githubusercontent.com/gonzalo/gphoto2-updater/master/gphoto2-updater.sh
@@ -43,6 +45,11 @@ chmod +x gphoto2-updater.sh
 sudo echo "2" | sudo ./gphoto2-updater.sh
 sudo reboot
 ```
+To check if gphoto2 is installed, type:
+```
+gphoto2
+```
+This should thow an error, showing you a list of valid options.
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
