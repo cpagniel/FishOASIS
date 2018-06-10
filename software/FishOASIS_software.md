@@ -20,7 +20,7 @@ sudo reboot
 Yes ("Y") will be selected when asked to install this package.
 
 ### wittyPi
-Third, install wittyPi package. The wittyPi should **NOT** be attached to the RPi during installation.
+Third, install the wittyPi package. The wittyPi should **NOT** be attached to the RPi during installation.
 ```
 cd /home/pi
 sudo wget http://www.uugear.com/repo/WittyPi2/installWittyPi.sh
@@ -30,22 +30,16 @@ sudo reboot
 Yes ("Y") will be selected when asked to remove fake-hwclock package and disable ntpd deamon. 
 No ("N") will be selected when asked to install the QT5 option (i.e., wittyPi GUI).
 
-For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).
-
 After the wittyPi software is installed, shutdown the RPi using the command `sudo shutdown -h now`. Mount the wittyPi onto the RPi (while the RPi is off).
 
-Test to ensure that the wittyPi package is installed and working by scheduling a shutdown and startup.
+Test to ensure that the wittyPi package is installed and working by scheduling a shutdown and startup. Start the wittyPi.sh program using the following commands:
 ```
 cd wittyPi
 sudo ./wittyPi.sh
 ```
-Select `1. Write system time to RTC`. This will write the system time (set via the internet connection) to the RTC on the wittyPi.  
+In the wittyPi.sh program, select `1. Write system time to RTC`. This will write the system time (set via the internet connection) to the RTC on the wittyPi. Next, select `6. Choose schedule script` and choose the pre-loaded script called `on_5m_every_20m`. The wittyPi will now turn on the RPi for 5 minutes every 20 minutes. Exit the wittyPi.sh program by selecting `8. Exit`.  
 
-Select `6. Choose schedule script`. Select the pre-loaded script called `on_5m_every_20m`. 
-
-Exit the wittyPi.sh program by selecting `8. Exit`.  
-
-Shutdown the RPi using the command `sudo shutdown -h now` and wait for the RPi to startup again. Deselect the schedule script in the wittyPi.sh program before continuing with the installation of the next package.
+Shutdown the RPi using the command `sudo shutdown -h now` and wait for the wittyPi to turn on the RPi. Deselect the schedule script in the wittyPi.sh program before continuing with the installation of the next package.
 
 ### gphoto2
 Fourth, install gphoto2 package. Installing this package will take a long time (i.e., a few hours). Ensure that you have a secure internet connection. If the internet is disconnected at any point during the install, it will fail.  If the screen goes black, it has gone to sleep. This does not stop the install. Tap the space bar to wake it up, if desired. 
@@ -56,11 +50,15 @@ chmod +x gphoto2-updater.sh
 sudo echo "2" | sudo ./gphoto2-updater.sh
 sudo reboot
 ```
-To check if gphoto2 is installed, type:
+To check if gphoto2 is installed, use the command:
 ```
 gphoto2
 ```
 This should thow an error, showing you a list of valid options.
+
+## Additional Information
+
+For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
