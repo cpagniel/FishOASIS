@@ -3,5 +3,5 @@ Formatting instructions for microSD card as well as configuration of initial set
 
 ## Format microSD card using SD Card Formatter
 
-[Click here](https://www.sdcard.org/downloads/formatter_4/) to download SD Card Formatter.
+[Click here](https://www.sdcard.org/downloads/formatter_4/) to download SD Card Formatter.  
 [Click here](https://etcher.io/) to download Etcher.
