@@ -183,8 +183,9 @@ mv timelapse2.sh timelapse.sh
 
 ## Additional Information
 
-For more details on the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).  
-For more details on wiringPi, [click here](http://wiringpi.com/).
+For more details about the gphoto2 package, [click here](http://www.gphoto.org/).
+For more details about the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).  
+For more details about the wiringPi package, [click here](http://wiringpi.com/).
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
