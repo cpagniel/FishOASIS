@@ -44,13 +44,28 @@ sudo raspi-config
 ```
 
 Use the menu to change the following settings:
+1. Change User Password 
+..* `FishOA$I$`
+2. Network Options
+..* Hostname: `FishOASIS_#` (i.e., insert which FishOASIS number)
+3. Boot Options
+..* Desktop/CLI: Set to `Console Autologin`
+..* Wait for Network at Boot: `No`
+4. Localisation Options
+..* Change Timezone: `America` > `Los_Angeles`
+..* Change Keyboard Layout: Follow the instructions found [here](https://thepihut.com/blogs/raspberry-pi-tutorials/25556740-changing-the-raspberry-pi-keyboard-layout).
 
+Use right arrow key to select `Finish`. When asked if you'd like to reboot now, choose `Yes`.
+
+## FishOASIS Software 
+
+[Click here](software/FishOASIS_software.md) for further instructions on how to install the software needed on the RPi for FishOASIS.
 
 ## Downloads
 
 [Click here](https://www.sdcard.org/downloads/formatter_4/) to download SD Card Formatter.  
 [Click here](https://etcher.io/) to download Etcher.  
-[Click here](https://www.raspberrypi.org/downloads/raspbian/) to download Raspbian Stretch Lite Image. 
+[Click here](https://www.raspberrypi.org/downloads/raspbian/) to download Raspbian Stretch Lite Image.
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
