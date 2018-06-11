@@ -60,7 +60,7 @@ This should thow an error, showing you a list of valid options.
 Finally, install the wiringPi package. The wiringPi project provides fine control over the GPIO pins from the command line and C. There are python and other wrappers for wiringPi as well. 
 ```
 cd /home/pi
-git clone git://git.dragon.net/wiringPi
+git clone https://github.com/WiringPi/WiringPi.git
 
 cd wiringPi
 ./build
