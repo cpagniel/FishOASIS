@@ -42,7 +42,7 @@ In the wittyPi.sh program, select `1. Write system time to RTC`. This will write
 Shutdown the RPi using the command `sudo shutdown -h now` and wait for the wittyPi to turn on the RPi. Deselect the schedule script in the wittyPi.sh program before continuing with the installation of the next package.
 
 ### gphoto2
-Fourth, install gphoto2 package. Installing this package will take a long time (i.e., a few hours). Ensure that you have a secure internet connection. If the internet is disconnected at any point during the install, it will fail.  If the screen goes black, it has gone to sleep. This does not stop the install. Tap the space bar to wake it up, if desired. 
+Fourth, install the gphoto2 package. Installing this package will take a long time (i.e., a few hours). Ensure that you have a secure internet connection. If the internet is disconnected at any point during the install, it will fail.  If the screen goes black, it has gone to sleep. This does not stop the install. Tap the space bar to wake it up, if desired. 
 ```
 cd /home/pi
 wget https://raw.githubusercontent.com/gonzalo/gphoto2-updater/master/gphoto2-updater.sh
@@ -55,6 +55,16 @@ To check if gphoto2 is installed, use the command:
 gphoto2
 ```
 This should thow an error, showing you a list of valid options.
+
+### wiringPi
+Finally, install the wiringPi package. The wiringPi project provides fine control over the GPIO pins from the command line and C. There are python and other wrappers for wiringPi as well. 
+```
+cd /home/pi
+git clone git://git.dragon.net/wiringPi
+
+cd wiringPi
+./build
+```
 
 ## Configure USB Mount Location
 
@@ -81,9 +91,78 @@ sudo umount /media/DATA
 
 ## Download the FishOASIS .sh Scripts
 
+### gphoto2 .sh Scripts
 
+Download the FishOASIS gphoto2 .sh scripts onto the RPi.
+```
+cd /home/pi && mkdir gphoto2
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/FishOASIS.sh
+chmod +x FishOASIS.sh
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/shutdown_now.sh
+chmod +x shutdown_now.sh
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/timelapse.sh
+chmod +x timelapse.sh
+```
 
-### 
+### wittyPi .wpi Schedule Scripts
+
+Download the FishOASIS wittyPi .wpi schedule scripts onto the RPi and remove unnecessary schedule scripts.
+```
+cd /home/pi/wittyPi/schedules
+rm *.wpi
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_5am_wakeup.sh
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/fishOASIS_12m.sh
+```
+
+Start the wittyPi.sh program using the following commands:
+```
+cd wittyPi
+sudo ./wittyPi.sh
+```
+In the wittyPi.sh program, select `6. Choose schedule script` and choose the script called `fishOASIS_12m.wpi`. The wittyPi will now turn on the RPi for 12 minutes until the RPi receives a shutdown command. Exit the wittyPi.sh program by selecting `8. Exit`.  
+
+### wiringPi script
+
+Download the FishOASIS calibration tone file onto the RPi.
+```
+cd /home/pi/wiringPi/examples
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/wiringPi/FishOASIS_calibration.c
+make FishOASIS_calibration
+```
+
+Test the calibration tone file using the command `sudo ./FishOASIS_calibration`.
+
+## Edit .bashrc script
+
+Add the following to the end of the .bashrc located in the `/home/pi` folder:
+```
+# Image Capture, wittyPi Scheduling and Shutdown Sequence for FishOASIS
+
+sleep 10
+
+cd /home/pi/wiringPi/examples
+sudo ./FishOASIS_calibration
+
+cd /home/pi/gphoto2
+timeout 3000s sudo ./FishOASIS.sh
+timeout 60s sudo ./shutdown_now.sh
+
+# If all else fails, wittyPi will schedule and RPi will shutdown. (Code should never get here as RPi should already be turned off.)
+
+echo “Scheduling next start-up from .bashrc”
+cd /home/pi/wittyPi/schedules && sudo cp fishOASIS_12m.wpi /home/pi/wittyPi/schedule.wpi
+cd /home/pi/wittyPi && sudo ./runScript.sh
+
+RUNFILE=”run.log”
+echo “RPi shutdown initiated from .bashrc in 10 seconds.”
+cd /media/DATA && echo “RPi shutdown from the .bashrc at:” $(date) >> “${RUNFILE}”
+cd /media/DATA && echo >> “${RUNFILE}”
+sleep 10
+sudo shutdown -h now
+```
+Reboot the RPI using the command `sudo reboot`.
+
+**Congratulations, you have succesfully installed all of the software needed for FishOASIS onto the RPi!**
 
 ## Potential Errors
 
