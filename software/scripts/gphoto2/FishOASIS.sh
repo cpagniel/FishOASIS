@@ -29,13 +29,11 @@ if [ -s usb_id.txt ]; then
     else
         sudo mount /dev/$USBID /media/DATA -o uid=pi,gid=pi
         USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-        cd /media/DATA && du | grep -o -E '[0-9]+' | tail -1 >> usb_space.txt
     fi
 else
     sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
     USBID="sda1" && echo sda1 >> usb_id.txt
     USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-    cd /media/DATA && du | grep -o -E '[0-9]+' | tail -1 >> usb_space.txt
 fi
 
 # ------------------------------------------------------------
@@ -50,7 +48,7 @@ RUNFILE="run.log"
 cd /media/DATA && echo "Start Time of FishOASIS.sh" $start >> "${RUNFILE}"
 
 echo ""
-cd /media/DATA && echo "Data stored to:" $USBNAME && echo "Used space on USB:" $(cat usb_space.txt)
+cd /media/DATA && echo "Data stored to:" $USBNAME
 cd /media/DATA && echo "Data stored to:" $USBNAME >> "${RUNFILE}"
 
 # ------------------------------------------------------------
@@ -141,7 +139,8 @@ cd /media/DATA && echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFI
 # Check USB space
 # ------------------------------------------------------------
 
-cd /media && du | grep -o -E '[0-9]+' | tail -1 >> usb_space.txt
+cd /media 
+du | grep -o -E '[0-9]+' | tail -1 >> usb_space.txt
 
 if [ $(cat usb_space.txt) -ge 235929600 ]; then
     echo ""
