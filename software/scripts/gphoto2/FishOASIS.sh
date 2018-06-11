@@ -24,7 +24,7 @@ hour=$(date +%H)
 cd /home/pi/gphoto2
 if [ -s usb_id.txt ]; then
     USBID=$(cat usb_id.txt)
-    if [ $USBID = "FULL"
+    if [ $USBID = "FULL" ]; then
         cd /media/DATA
     else
         sudo mount /dev/$USBID /media/DATA -o uid=pi,gid=pi
@@ -150,6 +150,7 @@ if [ $SPACE -ge 235929600 ]; then
     elif [ $USBID = "sdb1" ]; then
         USBID="sdc1" && echo sda1 >> usb_id.txt 
     elif [ $USBID = "sdc1" ]; then
+        USBID="FULL" && echo sda1 >> usb_id.txt 
         cd /media && mkdir DATA
     fi
 fi
