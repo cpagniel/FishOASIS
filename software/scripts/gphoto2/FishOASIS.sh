@@ -22,6 +22,7 @@ hour=$(date +%H)
 # ------------------------------------------------------------
 
 sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
+USBID=$(df | grep /dev/sd | cut -b 6-9)
 USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
 
 # ------------------------------------------------------------
@@ -37,6 +38,7 @@ if [ $SPACE -ge 235929600 ]; then
     sudo umount /media/DATA
 
     sudo mount /dev/sdb1 /media/DATA -o uid=pi,gid=pi
+    USBID=$(df | grep /dev/sd | cut -b 6-9)
     USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
 
     cd /media
@@ -48,6 +50,7 @@ if [ $SPACE -ge 235929600 ]; then
         sudo umount /media/DATA
 
         sudo mount /dev/sdc1 /media/DATA -o uid=pi,gid=pi
+        USBID=$(df | grep /dev/sd | cut -b 6-9)
         USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
 
         cd /media
