@@ -31,7 +31,6 @@ USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
 
 cd /media
 SPACE=$(du | grep [0-9] | tail -1)
-SPACE=$(printf "%0.f" $SPACE)
 if [ $SPACE -ge 235929600 ]; then
     echo ""
     echo $USBNAME "is full"
@@ -43,7 +42,6 @@ if [ $SPACE -ge 235929600 ]; then
 
     cd /media
     SPACE=$(du | grep [0-9] | tail -1)
-    SPACE=$(printf "%0.f" $SPACE)
     if [ $SPACE -ge 235929600 ]; then
         echo ""
         echo $USBNAME "is full"
@@ -55,7 +53,6 @@ if [ $SPACE -ge 235929600 ]; then
 
         cd /media
         SPACE=$(du | grep [0-9] | tail -1)
-        SPACE=$(printf "%0.f" $SPACE)
         if [ $SPACE -ge 235929600 ]; then
             echo ""
             echo $USBNAME "is full"
