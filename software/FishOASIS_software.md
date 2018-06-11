@@ -95,7 +95,7 @@ sudo umount /media/DATA
 
 Download the FishOASIS gphoto2 .sh scripts onto the RPi.
 ```
-cd /home/pi && mkdir gphoto2
+cd /home/pi && mkdir gphoto2 && cd gphoto2
 wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/FishOASIS.sh
 chmod +x FishOASIS.sh
 
