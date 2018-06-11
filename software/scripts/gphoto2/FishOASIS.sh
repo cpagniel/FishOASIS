@@ -140,7 +140,7 @@ cd /media/DATA && echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFI
 # ------------------------------------------------------------
 
 cd /media 
-du | grep -o -E '[0-9]+' | tail -1 >> usb_space.txt
+du | grep -o -E '[0-9]+' | tail -1 >> /home/pi/gphoto2/usb_space.txt
 
 if [ $(cat usb_space.txt) -ge 235929600 ]; then
     echo ""
