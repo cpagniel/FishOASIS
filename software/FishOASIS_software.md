@@ -62,7 +62,7 @@ Finally, install the wiringPi package. The wiringPi project provides fine contro
 cd /home/pi
 git clone https://github.com/WiringPi/WiringPi.git
 
-cd wiringPi
+cd WiringPi
 ./build
 ```
 
@@ -127,7 +127,7 @@ In the wittyPi.sh program, select `6. Choose schedule script` and choose the scr
 
 Download the FishOASIS calibration tone file onto the RPi.
 ```
-cd /home/pi/wiringPi/examples
+cd /home/pi/WiringPi/examples
 wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/wiringPi/FishOASIS_calibration.c
 make FishOASIS_calibration
 ```
