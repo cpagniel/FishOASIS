@@ -21,9 +21,14 @@ hour=$(date +%H)
 # Mount USB
 # ------------------------------------------------------------
 
-sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
-USBID=$(df | grep /dev/sd | cut -b 6-9)
-USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
+if [ -s usb_name.txt ]; then
+    
+else
+    sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
+    USBID=$(df | grep /dev/sd | cut -b 6-9)
+    USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
+    cd /home/pi/gphoto2 && echo $USBNAME >> usb_name.txt
+fi
 
 # ------------------------------------------------------------
 # Check USB space
@@ -31,6 +36,8 @@ USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
 
 cd /media
 SPACE=$(du | grep [0-9] | tail -1)
+cd /home/pi/gphoto2 && echo $SPACE >> usb_space.txt
+cd /media
 if [ $SPACE -ge 235929600 ]; then
     echo ""
     echo $USBNAME "is full"
