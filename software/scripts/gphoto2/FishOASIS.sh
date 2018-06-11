@@ -29,11 +29,13 @@ if [ -s usb_id.txt ]; then
     else
         sudo mount /dev/$USBID /media/DATA -o uid=pi,gid=pi
         USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
+        SPACE=$(du | grep [0-9] | tail -1)
     fi
 else
     sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
     USBID="sda1" && echo sda1 >> usb_id.txt
     USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
+    SPACE=$(du | grep [0-9] | tail -1)
 fi
 
 # ------------------------------------------------------------
