@@ -4,7 +4,7 @@
 #
 #
 #  Author: Camille Pagniello
-#  Last Edit: 06/10/2018
+#  Last Edit: 06/11/2018
 #  Script to schedule wittyPi and run timelapse.sh between 05:00 and 21:00
 #
 # ------------------------------------------------------------
@@ -139,19 +139,19 @@ cd /media/DATA && echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFI
 # Check USB space
 # ------------------------------------------------------------
 
-cd /media 
-du | grep -o -E '[0-9]+' | tail -1 > /home/pi/gphoto2/usb_space.txt
+cd /home/pi/gphoto2 && sudo rm usb_space.txt
+du -s /media/DATA | grep -o -E '[0-9]+' > /home/pi/gphoto2/usb_space.txt
 
 cd /home/pi/gphoto2
 if [ $(cat usb_space.txt) -ge 235929600 ]; then
     echo ""
     echo $USBNAME "is full"
     if [ $USBID = "sda1" ]; then
-        USBID="sdb1" && echo sda1 > usb_id.txt
+        sudo rm usb_id.txt && echo sdb1 > usb_id.txt
     elif [ $USBID = "sdb1" ]; then
-        USBID="sdc1" && echo sda1 > usb_id.txt
+        sudo rm usb_id.txt && echo sdc1 > usb_id.txt
     elif [ $USBID = "sdc1" ]; then
-        USBID="FULL" && echo sda1 > usb_id.txt
+        sudo rm usb_id.txt && echo FULL > usb_id.txt
         cd /media && mkdir DATA
     fi
 fi
