@@ -142,7 +142,7 @@ Add the following to the end of the .bashrc located in the `/home/pi` folder:
 
 sleep 10
 
-cd /home/pi/wiringPi/examples
+cd /home/pi/WiringPi/examples
 sudo ./FishOASIS_calibration
 
 cd /home/pi/gphoto2
