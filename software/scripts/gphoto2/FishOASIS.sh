@@ -21,54 +21,19 @@ hour=$(date +%H)
 # Mount USB
 # ------------------------------------------------------------
 
-if [ -s usb_name.txt ]; then
-    
+cd /home/pi/gphoto2
+if [ -s usb_id.txt ]; then
+    USBID=$(cat usb_id.txt)
+    if [ $USBID = "FULL"
+        cd /media/DATA
+    else
+        sudo mount /dev/$USBID /media/DATA -o uid=pi,gid=pi
+        USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
+    fi
 else
     sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
-    USBID=$(df | grep /dev/sd | cut -b 6-9)
-    USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-    cd /home/pi/gphoto2 && echo $USBNAME >> usb_name.txt
-fi
-
-# ------------------------------------------------------------
-# Check USB space
-# ------------------------------------------------------------
-
-cd /media
-SPACE=$(du | grep [0-9] | tail -1)
-cd /home/pi/gphoto2 && echo $SPACE >> usb_space.txt
-cd /media
-if [ $SPACE -ge 235929600 ]; then
-    echo ""
-    echo $USBNAME "is full"
-    sudo umount /media/DATA
-
-    sudo mount /dev/sdb1 /media/DATA -o uid=pi,gid=pi
-    USBID=$(df | grep /dev/sd | cut -b 6-9)
-    USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-
-    cd /media
-    SPACE=$(du | grep [0-9] | tail -1)
-    if [ $SPACE -ge 235929600 ]; then
-        echo ""
-        echo $USBNAME "is full"
-        sudo umount /media/DATA
-
-        sudo mount /dev/sdc1 /media/DATA -o uid=pi,gid=pi
-        USBID=$(df | grep /dev/sd | cut -b 6-9)
-        USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-
-        cd /media
-        SPACE=$(du | grep [0-9] | tail -1)
-        if [ $SPACE -ge 235929600 ]; then
-            echo ""
-            echo $USBNAME "is full"
-            sudo umount /media/DATA
-
-            cd /media
-            mkdir DATA
-        fi
-    fi
+    USBID="sda1" && echo sda1 >> usb_id.txt
+    USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)   
 fi
 
 # ------------------------------------------------------------
@@ -169,6 +134,25 @@ fi
 
 cd /home/pi/wittyPi && temp="$(get_temperature)"
 cd /media/DATA && echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFILE}"
+
+# ------------------------------------------------------------
+# Check USB space
+# ------------------------------------------------------------
+
+cd /media && SPACE=$(du | grep [0-9] | tail -1)
+
+if [ $SPACE -ge 235929600 ]; then
+    echo ""
+    echo $USBNAME "is full"
+    
+    if [ $USBID = "sda1" ]; then
+        USBID="sdb1" && echo sda1 >> usb_id.txt      
+    elif [ $USBID = "sdb1" ]; then
+        USBID="sdc1" && echo sda1 >> usb_id.txt 
+    elif [ $USBID = "sdc1" ]; then
+        cd /media && mkdir DATA
+    fi
+fi
 
 # ------------------------------------------------------------
 # Cleanup
