@@ -59,7 +59,7 @@ Use right arrow key to select `Finish`. When asked if you'd like to reboot now, 
 
 ## FishOASIS Software 
 
-[Click here](software/FishOASIS_software.md) for further instructions on how to install the software needed on the RPi for FishOASIS.
+[Click here](/FishOASIS/software/FishOASIS_software.md) for further instructions on how to install the software needed on the RPi for FishOASIS.
 
 ## Downloads
 
