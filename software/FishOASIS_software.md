@@ -98,8 +98,10 @@ Download the FishOASIS gphoto2 .sh scripts onto the RPi.
 cd /home/pi && mkdir gphoto2
 wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/FishOASIS.sh
 chmod +x FishOASIS.sh
+
 wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/shutdown_now.sh
 chmod +x shutdown_now.sh
+
 wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/timelapse.sh
 chmod +x timelapse.sh
 ```
@@ -111,7 +113,7 @@ Download the FishOASIS wittyPi .wpi schedule scripts onto the RPi and remove unn
 cd /home/pi/wittyPi/schedules
 rm *.wpi
 wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_5am_wakeup.sh
-wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/gphoto2/fishOASIS_12m.sh
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_12m.sh
 ```
 
 Start the wittyPi.sh program using the following commands:
@@ -161,8 +163,6 @@ sleep 10
 sudo shutdown -h now
 ```
 Reboot the RPI using the command `sudo reboot`.
-
-**Congratulations, you have succesfully installed all of the software needed for FishOASIS onto the RPi!**
 
 ## Potential Errors
 
