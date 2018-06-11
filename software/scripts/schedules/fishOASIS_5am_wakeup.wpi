@@ -1,0 +1,12 @@
+# Turns on RPi at 05:00:00
+
+BEGIN	2015-08-01 05:00:00
+END	2025-07-31 23:59:59
+
+# -- turn on at 05:00:00 and wait for RPi to initalize shutdown
+# -- should start up at 05:00:00, as long as shutdown is not missed
+# -- use default ON setting
+# -- allows battery swapping
+
+ON	H16 M30     WAIT   # keep ON state for 1 hour
+OFF	H7 M30           # keep OFF for 23 hours

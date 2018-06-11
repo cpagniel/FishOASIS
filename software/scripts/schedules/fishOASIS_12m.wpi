@@ -1,0 +1,12 @@
+# Turns on RPi every 12 minutes on the 12, 24, 36, 48 and 60 min marks
+
+BEGIN	2015-08-01 00:00:00
+END	2025-07-31 23:59:59
+
+# -- turn on for "8 min" and wait for shutdown
+# -- should start up every 12 minutes, as long as shutdown is not missed
+# -- use default ON setting
+# -- allows battery swapping
+
+ON	M8     WAIT   # keep ON state for 8 minutes
+OFF	M4            # keep OFF until 12 min mark
