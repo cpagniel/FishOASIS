@@ -32,7 +32,7 @@ if [ -s usb_id.txt ]; then
     fi
 else
     sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
-    USBID="sda1" && echo sda1 >> usb_id.txt
+    USBID="sda1" && echo sda1 > usb_id.txt
     USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
 fi
 
@@ -140,18 +140,18 @@ cd /media/DATA && echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFI
 # ------------------------------------------------------------
 
 cd /media 
-cd /home/pi/gphoto2 && sudo rm usb_space.txt
-du | grep -o -E '[0-9]+' | tail -1 >> usb_space.txt
+du | grep -o -E '[0-9]+' | tail -1 > /home/pi/gphoto2/usb_space.txt
 
+cd /home/pi/gphoto2
 if [ $(cat usb_space.txt) -ge 235929600 ]; then
     echo ""
     echo $USBNAME "is full"
     if [ $USBID = "sda1" ]; then
-        USBID="sdb1" && echo sda1 >> usb_id.txt
+        USBID="sdb1" && echo sda1 > usb_id.txt
     elif [ $USBID = "sdb1" ]; then
-        USBID="sdc1" && echo sda1 >> usb_id.txt
+        USBID="sdc1" && echo sda1 > usb_id.txt
     elif [ $USBID = "sdc1" ]; then
-        USBID="FULL" && echo sda1 >> usb_id.txt
+        USBID="FULL" && echo sda1 > usb_id.txt
         cd /media && mkdir DATA
     fi
 fi
