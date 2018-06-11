@@ -29,13 +29,13 @@ if [ -s usb_id.txt ]; then
     else
         sudo mount /dev/$USBID /media/DATA -o uid=pi,gid=pi
         USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-        SPACE=$(du | grep [0-9] | tail -1)
+        SPACE=$(du | grep -o -E '[0-9]+' | tail -1)
     fi
 else
     sudo mount /dev/sda1 /media/DATA -o uid=pi,gid=pi
     USBID="sda1" && echo sda1 >> usb_id.txt
     USBNAME=$(sudo blkid | grep $USBID | cut -b 19-23)
-    SPACE=$(du | grep [0-9] | tail -1)
+    SPACE=$(du | grep -o -E '[0-9]+' | tail -1)
 fi
 
 # ------------------------------------------------------------
@@ -141,7 +141,7 @@ cd /media/DATA && echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFI
 # Check USB space
 # ------------------------------------------------------------
 
-cd /media && SPACE=$(du | grep [0-9] | tail -1)
+cd /media && SPACE=$(du | grep -o -E '[0-9]+' | tail -1)
 
 if [ $SPACE -ge 235929600 ]; then
     echo ""
