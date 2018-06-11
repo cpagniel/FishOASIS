@@ -112,8 +112,8 @@ Download the FishOASIS wittyPi .wpi schedule scripts onto the RPi and remove unn
 ```
 cd /home/pi/wittyPi/schedules
 rm *.wpi
-wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_5am_wakeup.sh
-wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_12m.sh
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_5am_wakeup.wpi
+wget https://raw.githubusercontent.com/cpagniel/FishOASIS/master/software/scripts/schedules/fishOASIS_12m.wpi
 ```
 
 Start the wittyPi.sh program using the following commands:
