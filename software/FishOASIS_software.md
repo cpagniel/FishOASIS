@@ -142,9 +142,6 @@ Add the following to the end of the .bashrc located in the `/home/pi` folder:
 
 sleep 10
 
-cd /home/pi/WiringPi/examples
-sudo ./FishOASIS_calibration
-
 cd /home/pi/gphoto2
 timeout 3000s sudo ./FishOASIS.sh
 timeout 60s sudo ./shutdown_now.sh
