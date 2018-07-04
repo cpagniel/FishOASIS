@@ -44,7 +44,7 @@ int main ()
 
   printf ("Playing tones for inter-calibration.") ;
 
-  for (i = 0 ; i < 19 ; ++i)
+  for (i = 0 ; i < 10 ; ++i)
     {
       printf ("%3d\n", i) ;
       softToneWrite (PIN, scale [i]) ;
