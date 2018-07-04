@@ -74,6 +74,13 @@ if [ $hour -ge 5 ] && [ $hour -lt 21 ]; then
     cd /media/DATA && echo "RPi scheduled to turn back on in 12 minutes from FishOASIS.sh at:" $(date) >> "${RUNFILE}"
 
 # ------------------------------------------------------------
+# Calibration
+# ------------------------------------------------------------
+
+    cd /media/DATA && echo "FishOASIS inter-calibration started at:" $(date) >> "${RUNFILE}"
+    cd /home/pi/WiringPi/examples && sudo ./FishOASIS_calibration
+
+# ------------------------------------------------------------
 # Timelapse
 # ------------------------------------------------------------
 
