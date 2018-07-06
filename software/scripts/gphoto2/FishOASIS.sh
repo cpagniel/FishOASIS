@@ -4,7 +4,7 @@
 #
 #
 #  Author: Camille Pagniello
-#  Last Edit: 06/11/2018
+#  Last Edit: 07/05/2018
 #  Script to schedule wittyPi and run timelapse.sh between 05:00 and 21:00
 #
 # ------------------------------------------------------------
