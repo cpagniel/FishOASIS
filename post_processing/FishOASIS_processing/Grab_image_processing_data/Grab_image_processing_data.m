@@ -1,7 +1,7 @@
 %% Pull out data from image analysis
 % This script pulls out the fish count and identity data from the MAT files
 % created by the image_processing program and saves it as a sinlge MAT file.
-% 
+%
 % Author: J Butler
 % Created: Dec 2017
 % Last Edit: Jan 2018 by J Butler
@@ -42,29 +42,35 @@ for h = 1:numel(day)
     
     for i = 1:numel(day{h}.files)
         
-        load([day{h}.files(i).folder,'\',day{h}.files(i).name],'DATA');
-        
-        iDATA.(d{h}).date(i,1) = datenum(DATA.FILENAME(1:end-4),'yymmdd_HHMMSS');
-        
-        max_snumb = 94; % as of 07052018
-        
-        if length(DATA.COUNT) == 76
-            iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-76)];
+        if strfind(day{h}.files(i).name,'CallLog')
+            continue
+        else
+            
+            load([day{h}.files(i).folder,'\',day{h}.files(i).name],'DATA');
+            
+            iDATA.(d{h}).date(i,1) = datenum(DATA.FILENAME(1:13),'yymmdd_HHMMSS');
+            
+            max_snumb = 94; % as of 07052018
+            
+            if length(DATA.COUNT) == 76
+                iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-76)];
+            end
+            
+            if length(DATA.COUNT) == 79
+                iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-79)];
+            end
+            
+            if length(DATA.COUNT) == 91
+                iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-91)];
+            end
+            
+            if i == numel(day{h}.files)
+                iDATA.(d{h}).species = load('species.mat','snumb')';
+            end
+            
+            clear DATA
+            
         end
-        
-        if length(DATA.COUNT) == 79
-            iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-79)];
-        end
-        
-        if length(DATA.COUNT) == 91
-            iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-91)];
-        end
-        
-        if i == numel(day{h}.files)
-            iDATA.(d{h}).species = load('species.mat','snumb')';
-        end
-        
-        clear DATA
         
     end
 end
@@ -77,15 +83,15 @@ ttl = 'Save data'; btn1 = 'Yes'; btn2 = 'No';
 choice = questdlg(quest,ttl,btn1,btn2,btn1);
 
 if strcmp(choice,btn1)
-   [sname spath] = uiputfile('*.mat','Save extracted count data');
-   if isequal(sname,0) || isequal(spath,0)
-       uiwait(msgbox('User cancelled save request'));
-       return
-   else
-       cd(spath);
-       save(sname,'iDATA','-mat','-v7.3');
-       cd(gdir);
-   end
+    [sname spath] = uiputfile('*.mat','Save extracted count data');
+    if isequal(sname,0) || isequal(spath,0)
+        uiwait(msgbox('User cancelled save request'));
+        return
+    else
+        cd(spath);
+        save(sname,'iDATA','-mat','-v7.3');
+        cd(gdir);
+    end
 else
     uiwait(msgbox('User elected not to save extracted count data'));
     return
