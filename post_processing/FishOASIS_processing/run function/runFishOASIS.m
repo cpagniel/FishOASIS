@@ -1,6 +1,6 @@
 function runFishOASIS(~,sel)
 if sel == 1
-    image_processing_v3
+    image_processing_v4
 elseif sel == 2
     Grab_image_processing_data
 elseif sel == 3
