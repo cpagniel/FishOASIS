@@ -65,7 +65,7 @@ for h = 1:numel(day)
             end
             
             if i == numel(day{h}.files)
-                iDATA.(d{h}).species = load('species.mat','snumb')';
+                iDATA.(d{h}).species = load('species.mat','sfull')';
             end
             
             clear DATA
@@ -73,6 +73,12 @@ for h = 1:numel(day)
         end
         
     end
+    
+    % Remove 'CallLog' .mat rows
+    
+    ind = find(iDATA.(d{h}).date == 0);
+    iDATA.(d{h}).date(ind) = [];
+    iDATA.(d{h}).count(ind,:) = [];
 end
 
 set(0, 'DefaultFigureCreateFcn',''); % Allows figures to be created again
