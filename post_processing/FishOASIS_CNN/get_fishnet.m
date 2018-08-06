@@ -8,7 +8,7 @@ function current_fishnet = get_fishnet()
         warndlg('No previous version of the network will be loaded. Load an old network or train a new one.', '');
         current_fishnet = 0;
     else
-        load_fishnet_version = strcat(pwd, '\fishnet', '\fishnet_v', string(load_fishnet_version));
+        load_fishnet_version = strcat(pwd, '/fishnet', '/fishnet_v', string(load_fishnet_version));
        
         load(load_fishnet_version, 'fishnet')
         current_fishnet = fishnet;
