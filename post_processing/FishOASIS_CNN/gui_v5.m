@@ -156,7 +156,7 @@ else
 
         % Set handles
         handles.verification_case = 'boxnet';
-        handles.detect_n = 1;
+        handles.n_detect = 1;
 
         else
             auto_move = questdlg('Automatically move images without verification?', ...
@@ -187,6 +187,10 @@ else
                                 imwrite(current_resize, char(crop_name));
                             end
                         end
+                        
+                        target_dir = strcat(handles.data_dir, '/sorted');
+                        temp = strcat(handles.data_dir, '/', files(i).name);
+                        movefile(temp, char(target_dir));
                     end
                 
 
@@ -326,15 +330,15 @@ switch handles.verification_case
         
         % Check to see if this detection is the last one. If so, move to
         % the next image. 
-        if handles.detect_n == handles.detectns
+        if handles.n_detect == handles.detectns
             temp = get(handles.images_list, 'Value')  ;          
             % Move onto the next one
             set(handles.images_list, 'Value', temp + 1);
-            handles.detect_n = 1;            
+            handles.n_detect = 1;            
             target_dir = strcat(handles.data_dir, '/sorted');
             movefile(char(handles.target_image), char(target_dir))
         else
-            handles.detect_n = handles.detect_n + 1;
+            handles.n_detect = handles.n_detect + 1;
             
         end
         
@@ -373,21 +377,21 @@ switch handles.verification_case
         % directory (in order to be used for fishnet classification)
         crop_name = strcat(handles.data_dir, '/detection_output/agree', handles.root_name);
         imwrite(handles.current_resize, char(crop_name));
-        handles.detect_n = handles.detect_n + 1;
+        handles.n_detect = handles.n_detect + 1;
         
 
         % Check to see if this detection is the last one. If so, move to
         % the next image. 
-        if handles.detect_n == handles.detectns
+        if handles.n_detect == handles.detectns
        
             temp = get(handles.images_list, 'Value');            
             % Move onto the next one
             set(handles.images_list, 'Value', temp + 1);
-            handles.detect_n = 1;
+            handles.n_detect = 1;
             target_dir = strcat(handles.data_dir, '/sorted');
             movefile(char(handles.target_image), char(target_dir))
         else
-            handles.detect_n = handles.detect_n + 1;
+            handles.n_detect = handles.n_detect + 1;
             
         end
         
@@ -436,7 +440,7 @@ switch handles.verification_case
             % Display images one at a time. Crop parameters are in form of 
             % [X1 Y1 width height]. Resize to a square for input to classification 
             % network.
-            j = handles.detect_n
+            j = handles.n_detect
             square = max(detections(j).right - detections(j).left,...
                 detections(j).bottom - detections(j).top);
             crop_rect = [detections(j).left, detections(j).right, square, square];
