@@ -8,8 +8,7 @@ data_dir = uigetdir('', 'Select data folder');
 cd(data_dir);
 files = dir('*.jpg');
 
-
-%---------------------------------------
+%-------------------------------------------%
 % Iterate through image files
 for i = 1:length(files)
     bkg = makefilter(files, i);
@@ -17,11 +16,9 @@ for i = 1:length(files)
     img = imread(name);
     I = imsubtract(bkg, img);
     
-    
     % Get height of image
     image_h = size(I);
     image_h = image_h(1);
-    
     
     % Set red values in the lower half to 0
     I(image_h/2:end,:,1) = 0;
@@ -55,7 +52,6 @@ for i = 1:length(files)
         X1 = min(col); % left
         width = max(col) - min(col) + 1;
         height = max(row) - min(row) + 1;
-        
               
         % Object less than 60 pixels wide in the bottom half of the image is 
         % probably an artifact
@@ -75,11 +71,9 @@ for i = 1:length(files)
     % Save file
     dlmwrite(textname(files,i), detections, ' ');
 
-
 end
-
 
 % Gaussian filter?
 
-%---------------------------------------
-
+%-------------------------------------------%
+cd(old_dir);
