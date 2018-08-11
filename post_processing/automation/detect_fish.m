@@ -38,10 +38,10 @@ function detections = detect_fish(data_dir, index)
     
     % Apply Gaussian blur
     % Higher sigma, higher blur
-    J = imgaussfilt(J, 2);
+    J = imgaussfilt(J, .5);
     
     % Threshold value and amplify
-    bthresh = 8.5;
+    bthresh = 5;
     K = (J - bthresh) .^ 2;
     figure
     imshow(K)
@@ -94,7 +94,7 @@ function detections = detect_fish(data_dir, index)
     end
 
     % Save file
-   % dlmwrite(textname(files,index), detections, ' ');
+    % dlmwrite(textname(files,index), detections, ' ');
 
     %-------------------------------------------%
     cd(old_dir);

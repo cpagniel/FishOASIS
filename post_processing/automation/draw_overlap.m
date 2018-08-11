@@ -1,7 +1,7 @@
 function varargout = draw_overlap(varargin)
 % DRAW_OVERLAP MATLAB code for draw_overlap.fig
 %      
-%       080718
+%       081118
 %       Helen Cai
 %       A short GUI to view real and proposed ROIs (as given by the silhouetting method).
 %       Should be phased out as better metrics are implemented. 
