@@ -12,7 +12,7 @@ function name = textname(files, current)
 
 
 temp = erase(string(files(current).name), '.jpg');
-name = strcat(files(current).folder, '/', temp, '.txt');
+name = strcat(files(current).folder, '\', temp, '.txt');
 
 
 end
