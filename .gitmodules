@@ -1,0 +1,3 @@
+[submodule "post_processing/automation/fishnet/yolomex"]
+	path = post_processing/automation/fishnet/yolomex
+	url = https://github.com/ignacio-rocco/yolomex
