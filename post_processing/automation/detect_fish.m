@@ -1,5 +1,5 @@
 function detections = detect_fish(data_dir, index)    
-    % 080918
+    % 081018
     % Helen Cai
     % Detect fish by utilizing silhouettes and similar background imagery.
     % Accepts the data directory and index of image of interest as
@@ -8,7 +8,6 @@ function detections = detect_fish(data_dir, index)
     % Get directory information
     old_dir = pwd;
     addpath(pwd);
-    % data_dir = uigetdir('', 'Select data folder');
     cd(data_dir);
     files = dir('*.jpg');
 
@@ -17,7 +16,11 @@ function detections = detect_fish(data_dir, index)
     bkg = makefilter(files, index);
     name = char(files(index).name)
     img = imread(name);
+    figure
+    imshow(img);
     I = imsubtract(bkg, img);
+    figure
+    imshow(I);
 
     % Get height of image
     image_h = size(I);
@@ -25,66 +28,73 @@ function detections = detect_fish(data_dir, index)
 
     % Set red values in the lower half to 0
     I(image_h/2:end,:,1) = 0;
-    
-%     if mod(10,index) == 0
-%         figure
-%         imshow(I);
-%     end
 
-    % Combine RGB values
-    J = I(:,:,1) + I(:,:,2) + I(:,:,3)*1.2 - 85;
-    % Gain values
-    J = J .^ 2 - 100; % Nonlinear?
+    % Combine RGB values to generate 1D matrix
+    athresh = 85; % Subject to change
+    J = I(:,:,1) + I(:,:,2) + I(:,:,3) - athresh;
+    
+    % Fill holes?
+    J = imfill(J, 'holes');
+    
+    % Apply Gaussian blur
+    % Higher sigma, higher blur
+    J = imgaussfilt(J, 2);
+    
+    % Threshold value and amplify
+    bthresh = 8.5;
+    K = (J - bthresh) .^ 2;
+    figure
+    imshow(K)
+    
+    % Apply second Gaussian blur
+    L = imgaussfilt(K, 2.5);
+    
+    % Threshold value without amplification
+    cthresh = 30;
+    L = L - cthresh;
+    figure
+    imshow(L)
+
     % Convert to B&W
-    K = im2bw(J, graythresh(J));
-    imfill(K, 'holes');
-    % Average slices and subtract
+    M = im2bw(L, graythresh(L));
+    imfill(M, 'holes');
 
     % Remove small artifacts
-    K = bwareaopen(K, 225);
-%     if mod(10,index) == 0
-%         figure
-%         imshow(K);
-%     end
-    
+    N = bwareaopen(M, 225);
+    figure
+    imshow(N)
+
     % Label whitespace
-    L = bwlabel(K);
+    P = bwlabel(N);
 
     % Iterate through number of labels/objects identified
     detections = [];
     k = 1;
-    for j = 1:max(max(L))
+    for j = 1:max(max(P))
         % Find coordinates where label exists in image
-        [row, col] = find(L==j);
+        [row, col] = find(P==j);
         % Get box info
         Y1 = min(row); % top
+        Y1 = max(Y1-25,0); % Add some padding
         X1 = min(col); % left
-        width = max(col) - min(col) + 10; % Add some padding for benefit of fishnet
-        height = max(row) - min(row) + 10;
+        X1 = max(X1-25,0); % Add some padding
+        width = max(col) - min(col); 
+        height = max(row) - min(row);
 
-        % Object less than 60 pixels wide in the bottom half of the image is 
-        % probably an artifact
-        if width < 61 && Y1 > 0.5 * image_h
-            continue
-        elseif height < 61 && Y1 > 0.5 * image_h
-            continue
-        % We (probably) don't care if it's smaller than 40x40 pixels
-        elseif height < 41 && width < 41
+        % Object less than 150x150 pixels are probably artifacts
+        if width < 151 && height < 151
             continue
         else
             detections(k,1) = X1;
             detections(k,2) = Y1;
-            detections(k,3) = width;
-            detections(k,4) = height;
+            detections(k,3) = width + 50; % Add some padding for benefit of fishnet 
+            detections(k,4) = height + 50;
             k = k + 1;
         end
     end
 
     % Save file
-    %     dlmwrite(textname(files,index), detections, ' ');
-
-
-    % Gaussian filter?
+   % dlmwrite(textname(files,index), detections, ' ');
 
     %-------------------------------------------%
     cd(old_dir);
