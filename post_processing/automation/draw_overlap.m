@@ -3,7 +3,7 @@ function varargout = draw_overlap(varargin)
 %      
 %       080718
 %       Helen Cai
-%       A short GUI to view real and proposed ROIs (as given by YOLO).
+%       A short GUI to view real and proposed ROIs (as given by the silhouetting method).
 %       Should be phased out as better metrics are implemented. 
 %
 %      DRAW_OVERLAP, by itself, creates a new DRAW_OVERLAP or raises the existing
@@ -71,8 +71,6 @@ handles.files = data_files;
 handles.image_list = temp;
 handles.image_n = 0;
 
-
-
 % Choose default command line output for draw_overlap
 handles.output = hObject;
 
@@ -91,8 +89,8 @@ imshow(I);
 
 
 % Annotate image according to text file with the same name
-temp = textname(handles.files, handles.image_n);
-detections = dlmread(temp)
+temp = textname(handles.files, handles.image_n)
+detections = dlmread(temp);
 for i = 1:length(detections)
     % Draw rectangle
     rect = detections(i, :)

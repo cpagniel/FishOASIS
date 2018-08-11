@@ -1,0 +1,20 @@
+% 071018
+% Helen Cai
+% Load the previously trained neural networks using user input.
+function [current_boxnet, current_fishnet] = get_nets()
+    load_boxnet_version = inputdlg('Enter the version # of boxnet you would like to load.');
+    load_fishnet_version = inputdlg('Enter the version # of fishnet you would like to load.');
+    if isempty(load_boxnet_version{1}) | isempty(load_fishnet_version{1})
+        warndlg('No previous version of either network will be loaded. Load an old network or train a new one.', '');
+    else
+        % load_boxnet_version = strcat(pwd, '\boxnet', '\draw_boxes_v', string(load_boxnet_version), '.mat');
+
+        % load_fishnet_version = strcat(pwd, '\fishnet', 'fishnet_v',
+        % string(load_fishnet_version), '.mat');
+
+        % load load_boxnet_version
+        % current_boxnet = load_boxnet_version
+        % load load_fishnet_version
+        % current_fishnet = load_fishnet_version
+    end
+end

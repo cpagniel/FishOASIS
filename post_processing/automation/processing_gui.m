@@ -1,12 +1,12 @@
 
-function varargout = gui_v5(varargin)
+function varargout = processing_gui(varargin)
 
 % A more user-friendly GUI interface for training and implementing the
 % neural networks used to process FishOASIS data. Created with MATLAB
 % GUIDE. 
 
 
-% Edit the above text to modify the response to help gui_v5
+% Edit the above text to modify the response to help processing_gui
 
 % Last modified by H. Cai, 080618
 
@@ -14,8 +14,8 @@ function varargout = gui_v5(varargin)
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @gui_v5_OpeningFcn, ...
-                   'gui_OutputFcn',  @gui_v5_OutputFcn, ...
+                   'gui_OpeningFcn', @processing_gui_OpeningFcn, ...
+                   'gui_OutputFcn',  @processing_gui_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -30,26 +30,26 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before gui_v5 is made visible.
-function gui_v5_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before processing_gui is made visible.
+function processing_gui_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to gui_v5 (see VARARGIN)
+% varargin   command line arguments to processing_gui (see VARARGIN)
 
-% Choose default command line output for gui_v5
+% Choose default command line output for processing_gui
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes gui_v5 wait for user response (see UIRESUME)
+% UIWAIT makes processing_gui wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = gui_v5_OutputFcn(hObject, eventdata, handles) 
+function varargout = processing_gui_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -107,48 +107,33 @@ switch proceed
     case 'Yes'
         train_fishnet_version = uigetfile('*.m', 'Select version of fishnet to train.')
         warndlg('Are you sure you want to train this version of fishnet?', 'Confirm');
-        old_dir = pwd;
-        cd fishnet;
+        addpath('fishnet')
         run(train_fishnet_version);
-        cd(old_dir)
-        handles.current_fishnet = get_fishnet();
-        guidata(hObject, handles)
+        handles.current_fishnet = get_fishnet();        
     case 'No' 
         msgbox('Boxnet training cancelled');
 end
-
-
-
-% --- Executes on button press in get_weights.
-function get_weights_Callback(hObject, eventdata, handles)
-
-% Load desired weights for YOLO
-[weight_file, weight_path, filterindex] = uigetfile('*.weights', 'Select YOLO weights');
-handles.weight_file = weight_file
-
 guidata(hObject, handles)
 
-
-% --- Executes on button press in run_yolomex.
-function run_yolomex_Callback(hObject, eventdata, handles)
+% --- Executes on button press in detect.
+function detect_Callback(hObject, eventdata, handles)
 
 % Run object detection. There is an option for the user to verify any
 % output. Refer to later callbacks for details. 
-% 080618 Removed boxnet functionality to implement YOLO detection. 
+% 081018 Remove YOLO functionality to run detection through silhouetting. 
+% This is not a neural network!
 
 if isfield(handles, 'data_dir') == 0 | handles.data_dir == 0
     errordlg('Load the data folder containing raw images.');
-elseif isfield(handles, 'weight_file') == 0
-    errordlg('Load the weights for object detection network.');
 else
-    % Call script to run YOLO and get output
-    init_yolomex 
+    
     if get(handles.boxnet_verify, 'Value')
         % User verification is enabled. Refer to images_list callback for
         % details. 
         
         % Display list of resized images in listbox
         files = dir(fullfile(char(handles.data_dir), '*jpg'));
+        temp = cell(1, length(files));
         for i = 1:length(files)
             temp{i} = files(i).name;
         end
@@ -165,21 +150,24 @@ else
             switch auto_move
                 case 'Yes'
                     % Run object detection and automatically sort
-                    
-                    files = dir(fullfile(char(handles.data_dir), '*jpg'));
+                    files = dir(fullfile(char(handles.data_dir), '*.jpg'));
                     for i = 1:length(files)
-                        target_image = imread(fullfile(handles.data_dir, files(i).name));
-                        detections = yolomex('detect', target_image, handles.threshold, handles.hier_threshold)
-                        
+                        target_image = imread(fullfile(handles.data_dir, char(files(i).name)));
+                        detections = detect_fish(handles.data_dir, i)
                         if isempty(detections)
                             continue
                         else
-                            for j = 1:length(detections)
+                            h = size(detections);
+                            h = h(1);
+                            for j = 1:h
                                 % Crop and write image
-                                square = max(detections(j).right - detections(j).left,...
-                                    detections(j).bottom - detections(j).top);
-                                crop_rect = [detections(j).left, detections(j).right, square, square]
-                                current_crop = imcrop(target_image, crop_rect);
+                                rect = detections(j,:);
+                                square = max(rect(3), rect(4));
+                                rect(3) = square;
+                                rect(4) = square;
+                                
+                                
+                                current_crop = imcrop(target_image, rect);
                                 current_resize = imresize(current_crop, [227 227]);
                                 crop_name = erase(files(i).name, '.jpg');
                                 crop_name = strcat(crop_name, '-', int2str(j), '.jpg');
@@ -187,6 +175,10 @@ else
                                 imwrite(current_resize, char(crop_name));
                             end
                         end
+                    end 
+                        
+                        
+                    for i = 1:length(files)
                         
                         target_dir = strcat(handles.data_dir, '/sorted');
                         temp = strcat(handles.data_dir, '/', files(i).name);
@@ -375,7 +367,7 @@ switch handles.verification_case
     case 'boxnet'
         % Verification is being applied to boxnet; move images to resize
         % directory (in order to be used for fishnet classification)
-        crop_name = strcat(handles.data_dir, '/detection_output/agree', handles.root_name);
+        crop_name = strcat(handles.data_dir, '/detection_output/agree/', handles.root_name);
         imwrite(handles.current_resize, char(crop_name));
         handles.n_detect = handles.n_detect + 1;
         
@@ -405,7 +397,7 @@ end
 function images_list_Callback(hObject, eventdata, handles)
 
 % Display list of images and run the selected image through a network. 
-% The string is controlled by run_fishnet or run_yolomex callback. 
+% The string is controlled by run_fishnet or detect callback. 
 
 temp = get(handles.images_list, 'String');
 selected = temp(get(handles.images_list, 'Value'));
@@ -424,33 +416,37 @@ switch handles.verification_case
         
     case 'boxnet'
         % Run detection on an image
-              
-        target_image = imread(fullfile(char(handles.data_dir), cell2mat(selected)));
-        detections = yolomex('detect', target_image, handles.threshold, handles.hier_threshold);
-        detections.class
+        i = get(handles.images_list, 'Value')
+        dtns  = detect_fish(handles.data_dir, i);
+        temp = size(dtns);        
+        handles.detectns = temp(1);
         
         % If there are no detections, move to the next image in the list. 
-        if isempty(detections)
+        if isempty(dtns)
             temp = get(handles.images_list, 'Value');
             set(handles.images_list, 'Value', temp + 1);
             
         else 
-            handles.detectns = length(detections.prob);
+            target_image = imread(fullfile(handles.data_dir, char(selected))); %rect
+            
        
             % Display images one at a time. Crop parameters are in form of 
             % [X1 Y1 width height]. Resize to a square for input to classification 
             % network.
-            j = handles.n_detect
-            square = max(detections(j).right - detections(j).left,...
-                detections(j).bottom - detections(j).top);
-            crop_rect = [detections(j).left, detections(j).right, square, square];
-            current_crop = imcrop(target_image, crop_rect);
+            j = handles.n_detect;
+            rect = dtns(j,:);
+            square = max(rect(3), rect(4));
+            rect(3) = square;
+            rect(4) = square
+            
+            current_crop = imcrop(target_image, rect);
             current_resize = imresize(current_crop, [227 227]);
             root_name = erase(selected, '.jpg');
             handles.root_name = strcat(root_name, '-', int2str(j), '.jpg');
 
-
-            imshow(current_resize);
+            imshow(target_image, 'Parent', handles.main_axes);
+            rectangle('Position', rect, 'EdgeColor', 'y');
+            
             handles.current_resize = current_resize;
         
         end 

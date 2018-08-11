@@ -10,8 +10,9 @@ function name = textname(files, current)
 %   current: the index of the current .jpg file of choice
 
 
+
 temp = erase(string(files(current).name), '.jpg');
-name = strcat(pwd, '/', temp, '.txt');
+name = strcat(files(current).folder, '/', temp, '.txt');
 
 
 end
