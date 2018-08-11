@@ -60,9 +60,10 @@ function draw_overlap_OpeningFcn(hObject, eventdata, handles, varargin)
 
 % Get data and make list of file names
 data_dir = uigetdir('', 'Select data folder');
-data_files = dir(fullfile(char(data_dir), '*jpg'));
+data_files = dir(fullfile(char(data_dir), '*.txt'));
 for i = 1:length(data_files)
-   temp{i} = strcat(data_dir, '/', data_files(i).name);
+   t = strrep(data_files(i).name, '.txt', '.jpg');
+   temp{i} = strcat(data_dir, '/', t);
 end
 
 
@@ -89,8 +90,9 @@ imshow(I);
 
 
 % Annotate image according to text file with the same name
+files = handles.files;
 temp = textname(handles.files, handles.image_n)
-detections = dlmread(temp);
+detections = dlmread(temp, ' ');
 for i = 1:length(detections)
     % Draw rectangle
     rect = detections(i, :)
