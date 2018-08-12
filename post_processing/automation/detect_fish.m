@@ -11,16 +11,16 @@ function detections = detect_fish(data_dir, index)
     cd(data_dir);
     files = dir('*.jpg');
 
-    %-------------------------------------------%
     % Analyze image file
     bkg = makefilter(files, index);
-    name = char(files(index).name)
+    name = char(files(index).name);
+    fprintf(strcat(name, '\n'));
     img = imread(name);
-    figure
-    imshow(img);
+%    figure
+%    imshow(img);
     I = imsubtract(bkg, img);
-    figure
-    imshow(I);
+%     figure
+%     imshow(I);
 
     % Get height of image
     image_h = size(I);
@@ -43,8 +43,8 @@ function detections = detect_fish(data_dir, index)
     % Threshold value and amplify
     bthresh = 5;
     K = (J - bthresh) .^ 2;
-    figure
-    imshow(K)
+%     figure
+%     imshow(K)
     
     % Apply second Gaussian blur
     L = imgaussfilt(K, 2.5);
@@ -52,8 +52,8 @@ function detections = detect_fish(data_dir, index)
     % Threshold value without amplification
     cthresh = 30;
     L = L - cthresh;
-    figure
-    imshow(L)
+%     figure
+%     imshow(L)
 
     % Convert to B&W
     M = im2bw(L, graythresh(L));
@@ -61,8 +61,8 @@ function detections = detect_fish(data_dir, index)
 
     % Remove small artifacts
     N = bwareaopen(M, 225);
-    figure
-    imshow(N)
+%     figure
+%     imshow(N)
 
     % Label whitespace
     P = bwlabel(N);
@@ -94,8 +94,7 @@ function detections = detect_fish(data_dir, index)
     end
 
     % Save file
-    % dlmwrite(textname(files,index), detections, ' ');
+    dlmwrite(textname(files,index), detections, 'delimiter', ' ', 'newline', 'pc');
 
-    %-------------------------------------------%
     cd(old_dir);
 end
