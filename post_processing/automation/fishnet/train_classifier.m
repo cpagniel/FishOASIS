@@ -27,7 +27,7 @@ alexnet = alexnet();
 % Creates a new fully connected/output layer with n neurons, where 
 % n = number of classes
 layers = alexnet.Layers;
-n = 10;
+n = 9;
 layers(end-2) = fullyConnectedLayer(n); 
 layers(end) = classificationLayer; 
 

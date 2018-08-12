@@ -6,7 +6,7 @@
 % Classes of detection that fishnet has been trained on. Should correspond
 % with those listed in classes.txt.
 classes = categorical({'blacksmith' 'flora' 'garibaldi' 'halfmoon' 'kelp' ...
-    'kelp_bass' 'line' 'rock' 'sheephead' 'unknown'});
+    'kelp_bass' 'line' 'sheephead' 'unknown'});
 
 % Get file directory of raw data
 fprintf('Select folder containing raw images\n');

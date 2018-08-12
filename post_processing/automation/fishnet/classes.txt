@@ -5,6 +5,5 @@ halfmoon
 kelp
 kelp_bass
 line
-rock
 sheephead
 unknown
