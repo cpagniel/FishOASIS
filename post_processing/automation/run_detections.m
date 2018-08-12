@@ -9,11 +9,13 @@ classes = categorical({'blacksmith' 'flora' 'garibaldi' 'halfmoon' 'kelp' ...
     'kelp_bass' 'line' 'sheephead' 'unknown'});
 
 % Get file directory of raw data
-fprintf('Select folder containing raw images\n');
-data_dir = uigetdir('', 'Select folder containing raw images');
+fprintf('Select folder containing raw images.\n');
+data_dir = uigetdir('', 'Select folder containing raw images.');
+fprintf('Loading images from ');
+fprintf('%s', data_dir);
 
 % Get classification network of choice
-fprintf('Select classification network.\n');
+fprintf('\nSelect classification network.\n');
 [network, pathname] = uigetfile('*.mat', 'Select classification network.');
 load(strcat(pathname, network));
 fprintf('Loaded detection network: ');
@@ -28,6 +30,7 @@ for i = 1:n_images
 end
 
 % Run classification on each image
+fprintf('Classifying detections.\n');
 files = dir([fullfile(data_dir), '\*.jpg']);
 for i = 1:n_images
     
@@ -56,11 +59,11 @@ for i = 1:n_images
             fprintf(strcat(string(pred), '\n'));
             
             % Add species code
-            [C, index] = intersect(cats, pred);
+            [C, index] = intersect(classes, pred);
             dtns(j,5) = index;
         end
         
-        % Write contents of file back in
+        % Write contents of file back into text file
         % Each row is formatted as:
         %       [left coordinate] [top coordinate] [width] [height] [class code]
         dlmwrite( textname(files,i), dtns, ' ');

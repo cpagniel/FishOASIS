@@ -1,26 +1,23 @@
-% Helen Cai
 % 072318
 % Calculate performance metrics for neural networks of interest
 
 % Use trained network to classify test images
-fprintf('Classifying data using test set\n');
-current_net.Layers
-preds = classify(current_net, test_set)
+disp('Classifying data using test set');
+disp(current_net.Layers)
+preds = classify(current_net, test_set);
 
 % Investigate the percentage correct
-fprintf('Number of correct guesses: ');
-fprintf( nnz(preds == test_set.Labels));
-fprintf('\n');
-fprintf('Percentage of correct guesses: ');
-fprintf( nnz(preds == test_set.Labels) / numel(preds));
-fprintf('\n');
+disp('Number of correct guesses: ');
+disp( nnz(preds == test_set.Labels));
+disp('Percentage of correct guesses: ');
+disp( nnz(preds == test_set.Labels) / numel(preds));
 
 % Calculate confusion matrix
 % The (j,k) element of the confusion matrix is a count of how many images
 % from class j the network predicted to be in class k. Hence, diagonal
 % elements represent correct classifications; off-diagonal elements
 % represent misclassifications. 
-fprintf('Calculating confusion matrix...\n');
+disp('Calculating confusion matrix...');
 [confusion_matrix, names] = confusionmat(test_set.Labels, preds);
 heatmap(names, names, confusion_matrix);
 
@@ -68,19 +65,14 @@ for i = 1:length(names)
 end
 clear tp fp fn
 
-classification_scores
-
 % Display relevant scores
-fprintf('Precision: ');
+disp('Precision: ');
 precision = mean(classification_scores(:, :, 5));
-fprintf(precision);
-fprintf('\n');
+disp(precision);
 
-fprintf('Recall: ');
+disp('Recall: ');
 recall = mean(classification_scores(:, :, 6));
-fprintf(recall);
-fprintf('\n');
+disp(recall);
 
-fprintf('F1 score (the closer to 1, the better): ');
-fprintf( 2 * precision * recall / (precision + recall) );
-fprintf('\n');
+disp('F1 score (the closer to 1, the better): ');
+disp( 2 * precision * recall / (precision + recall) );
