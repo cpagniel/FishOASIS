@@ -36,6 +36,6 @@ else
     
     % Set PARAMS.ifile to the next filename and rerun program
     PARAMS.ifile = PARAMS.files(idx+1).name;
-    image_processing_v2
+    image_processing_v4
     
 end

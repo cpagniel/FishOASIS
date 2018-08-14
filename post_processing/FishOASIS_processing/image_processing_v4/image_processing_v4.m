@@ -1,7 +1,9 @@
 %% Image Processing
 % Author: C Pagniello
 % Original: Oct 2017
-% Last Edit: Jun 2018 (to v4) by C Pagniello
+% Last Edit: Aug 2018 (to v4.1) by A Sherwood
+% Adjusted window size and default position to accomodate horizontal images 
+
 
 if ~exist('PARAMS','var')
     
@@ -23,8 +25,8 @@ end
 %% Create Main Window
 
 MAIN.verno=' Image Processing v.4';
-MAIN.figwidth = 0.80;
-MAIN.figheight = 0.75;
+MAIN.figwidth = .94;
+MAIN.figheight = 0.74;
 
 MAIN.wbd='WindowButtonDown';
 MAIN.wbm='WindowButtonMotion';
@@ -224,3 +226,6 @@ PARAMS.hiname=uicontrol(MAIN.hf1,'style','edit','un','n','pos',[.915 .710 .085 .
 set(MAIN.hf1,MAIN.wbd,'',MAIN.wbm,'',MAIN.wbu,'');
 set(MAIN.hu1,'en','off')
 
+%% Move figure so the entire window can be seen by default
+
+movegui('west')
