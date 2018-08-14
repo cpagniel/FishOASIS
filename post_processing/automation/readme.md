@@ -27,13 +27,13 @@ To train the neural network, run fishnet/train_classifier from Matlab.
 From Matlab, open run_detections. Change the boolean flags at the top of the script to change the tasks that will be run. Run the script and follow the prompts. 
 
 Running this script generates several text files: 
-	* one text file for each image, containing a list of detections
-	* log.txt, recording all output to Matlab command window
-	* counts.txt, which counts the instances of each class detected based on the output of the log 
+* one text file for each image, containing a list of detections
+* log.txt, recording all output to Matlab command window
+* counts.txt, which counts the instances of each class detected based on the output of the log 
 
 ## Dependencies
 
 This project is dependent on the following add-ons in Matlab:
 
-	* Image Processing Toolbox
-	* Neural Network Toolbox
+* Image Processing Toolbox
+* Neural Network Toolbox
