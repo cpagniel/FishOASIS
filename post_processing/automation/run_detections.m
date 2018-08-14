@@ -8,6 +8,8 @@ TRAIN = 0;
 DETECT = 1;
 CLASSIFY = 1;
 
+diary('log.txt');
+
 % Classes of detection that fishnet has been trained on. Should correspond
 % with those listed in classes.txt.
 classes = categorical({'blacksmith' 'flora' 'garibaldi' 'halfmoon' 'kelp' ...
@@ -47,9 +49,10 @@ end
 if CLASSIFY
     fprintf('Classifying detections.\n');
     files = dir([fullfile(data_dir), '\*.jpg']);
+    n_images = size(files);
     old_dir = pwd;
     cd(data_dir);
-    for i = 1:n_images
+    for i = 1:n_images(1)
 
         % Read image
         I = imread(files(i).name);
@@ -94,3 +97,5 @@ end
 
 fprintf('Done with detection & classification. \n');
 fprintf('Check text files for results. \n');
+
+diary off;
