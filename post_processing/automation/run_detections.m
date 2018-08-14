@@ -4,9 +4,10 @@
 % Generates one text file for each raw image. 
 
 % Change these boolean flags as needed
-TRAIN = 0;
+TRAIN = 1;
 DETECT = 1;
 CLASSIFY = 1;
+COUNT = 1;
 
 diary('log.txt');
 fprintf(strcat(string(datetime), '\n'));
@@ -94,11 +95,27 @@ if CLASSIFY
 
         end
     end
-end
-
 fprintf('Done with detection & classification. \n');
 fprintf('Check text files for results. \n');
+end
 
 diary off;
 
+if COUNT
+    % Count instances of fish using the log
+    fprintf('\nCounting instances of fish using log. \n');
+    fileID = fopen( 'log.txt', 'r');
+    T = textscan(fileID, '%s');
+    fclose(fileID);
+    T = strjoin(string(T{1,1}));
+    for i = 1:length(classes)
+        c = string(classes(i));
+        counts.(c) = count(T, c);
+    end
+    counts = struct2table(counts);
+    writetable(counts);
+    fprintf('Counts saved to counts.txt.\n')
+end
+
+fprintf('End of script.\n')
 cd(old_dir);
