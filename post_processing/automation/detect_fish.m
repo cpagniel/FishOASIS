@@ -6,9 +6,6 @@ function detections = detect_fish(data_dir, index)
     % arguments.
 
     % Get directory information
-    old_dir = pwd;
-    addpath(pwd);
-    cd(data_dir);
     files = dir('*.jpg');
 
     % Analyze image file
@@ -98,6 +95,4 @@ function detections = detect_fish(data_dir, index)
 
     % Save file
     dlmwrite(textname(files,index), detections, 'delimiter', ' ', 'newline', 'pc');
-
-    cd(old_dir);
 end

@@ -9,6 +9,7 @@ DETECT = 1;
 CLASSIFY = 1;
 
 diary('log.txt');
+fprintf(strcat(string(datetime), '\n'));
 
 % Classes of detection that fishnet has been trained on. Should correspond
 % with those listed in classes.txt.
@@ -21,10 +22,14 @@ data_dir = uigetdir('', 'Select folder containing raw images.');
 fprintf('Loading images from ');
 fprintf('%s', data_dir);
 
+% Change directories
+addpath('./fishnet');
+old_dir = pwd;
+cd(data_dir);
+
 % Train network if necessary
 if TRAIN
     fprintf('\nTraining new classification network.\n');
-    addpath('./fishnet');
     train_classifier
 end
 
@@ -50,8 +55,6 @@ if CLASSIFY
     fprintf('Classifying detections.\n');
     files = dir([fullfile(data_dir), '\*.jpg']);
     n_images = size(files);
-    old_dir = pwd;
-    cd(data_dir);
     for i = 1:n_images(1)
 
         % Read image
@@ -90,12 +93,12 @@ if CLASSIFY
             dlmwrite( textname(files,i), dtns, ' ');
 
         end
-
     end
-    cd(old_dir);
 end
 
 fprintf('Done with detection & classification. \n');
 fprintf('Check text files for results. \n');
 
 diary off;
+
+cd(old_dir);
