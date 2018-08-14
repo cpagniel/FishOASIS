@@ -80,9 +80,12 @@ function detections = detect_fish(data_dir, index)
         X1 = max(X1-25,0); % Add some padding
         width = max(col) - min(col); 
         height = max(row) - min(row);
-
+        
+        % Eliminate nonsense rectangles
+        if width < 2 || height < 2
+            continue
         % Object less than 150x150 pixels are probably artifacts
-        if width < 151 && height < 151
+        elseif width < 151 && height < 151
             continue
         else
             detections(k,1) = X1;
