@@ -4,7 +4,7 @@
 % Generates one text file for each raw image. 
 
 % Change these boolean flags as needed
-TRAIN = 1;
+TRAIN = 0;
 DETECT = 1;
 CLASSIFY = 1;
 
@@ -47,10 +47,13 @@ end
 if CLASSIFY
     fprintf('Classifying detections.\n');
     files = dir([fullfile(data_dir), '\*.jpg']);
+    old_dir = pwd;
+    cd(data_dir);
     for i = 1:n_images
 
         % Read image
         I = imread(files(i).name);
+        fprintf(strcat(files(i).name, '\n'));
 
         % Read contents of corresponding text file
         fileID = fopen( textname(files,i), 'r+'); % check permissions here
@@ -86,6 +89,7 @@ if CLASSIFY
         end
 
     end
+    cd(old_dir);
 end
 
 fprintf('Done with detection & classification. \n');
