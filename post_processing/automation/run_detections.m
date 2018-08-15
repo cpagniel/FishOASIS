@@ -24,6 +24,7 @@ fprintf('Loading images from ');
 fprintf('%s', data_dir);
 
 % Change directories
+addpath(pwd);
 addpath('./fishnet');
 old_dir = pwd;
 cd(data_dir);
