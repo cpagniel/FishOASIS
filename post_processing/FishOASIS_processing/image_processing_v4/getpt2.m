@@ -36,21 +36,24 @@ text(DATA.XXc(MAIN.cnt)+20,DATA.YYc(MAIN.cnt)-20,num2str(PARAMS.icur),'FontSize'
 DATA.COUNT(PARAMS.icur) = DATA.COUNT(PARAMS.icur)+1;
 
 x0 = 0.50; y0 = 1.00;
-if PARAMS.icur >= PARAMS.icntmax
+if PARAMS.icur >= 50 && PARAMS.icur < 99
     x0 = x0 + 0.10;
-    y0 = y0 - 0.02*(PARAMS.icur-PARAMS.icntmax+1);
+    y0 = y0 - 0.02*(PARAMS.icur-50+1);
+elseif PARAMS.icur >= 99
+    x0 = x0 + 0.20;
+    y0 = y0 - 0.02*(PARAMS.icur-99+1);
 else
     y0 = y0 - 0.02*(PARAMS.icur);
 end
 
 if PARAMS.icur < 20
     MAIN.hu3(PARAMS.icur) = uicontrol(MAIN.hf1,'un','n','style','tex','pos',[x0+0.06 y0 .03 .02], ...
-            'str',num2str(DATA.COUNT(PARAMS.icur)),'tag','hu','fontsize',9,'fontweight','b',...
-            'backgroundcolor',PARAMS.scol(PARAMS.icur,:),'foregroundcolor','w');
+        'str',num2str(DATA.COUNT(PARAMS.icur)),'tag','hu','fontsize',9,'fontweight','b',...
+        'backgroundcolor',PARAMS.scol(PARAMS.icur,:),'foregroundcolor','w');
 else
-MAIN.hu3(PARAMS.icur) = uicontrol(MAIN.hf1,'un','n','style','tex','pos',[x0+0.06 y0 .03 .02], ...
-    'str',num2str(DATA.COUNT(PARAMS.icur)),'tag','hu','fontsize',9,'fontweight','b',...
-    'backgroundcolor',PARAMS.scol(PARAMS.icur,:));
+    MAIN.hu3(PARAMS.icur) = uicontrol(MAIN.hf1,'un','n','style','tex','pos',[x0+0.06 y0 .03 .02], ...
+        'str',num2str(DATA.COUNT(PARAMS.icur)),'tag','hu','fontsize',9,'fontweight','b',...
+        'backgroundcolor',PARAMS.scol(PARAMS.icur,:));
 end
 
-clear cp1 cp2 x0 y0 
+clear cp1 cp2 x0 y0
