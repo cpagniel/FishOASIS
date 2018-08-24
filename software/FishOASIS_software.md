@@ -178,6 +178,30 @@ rm timelapse.sh
 mv timelapse2.sh timelapse.sh
 ```
 
+## wittyPi+RPi shutdown immediately after finishing startup sequence
+
+If the wittyPi+RPi shutdown immediately after finishing the startup sequence, it is likely the GPIO-4 pin error described on pages 35-36 in the [Witty Pi 2 User Manual](http://www.uugear.com/doc/WittyPi2_UserManual.pdf). Disconnect the wittyPi from the RPi and boot the RPi. Use the wiringPi library to internally pull up the GPIO-4 pin using the following commands:
+```
+cd /home/pi/WiringPi/gpio
+gpio mode 7 up
+```
+
+Note, GPIO-4 is numbered as WiringPi pin 7. You can also test the GPIO pins using the following commands:
+```
+cd /home/pi/WiringPi/gpio
+chmod +x pintest
+sudo ./pintest
+```
+After running the Pin Test program, you must reboot the RPi to reset the GPIO pins. Other commands to test the GPIO pins include:
+```
+cd /home/pi/WiringPi/gpio
+gpio allreadall
+gpio readall
+```
+More information about these commands to test the GPIO pins can be found here:
+[Pin Test](http://wiringpi.com/the-gpio-utility/pin-test/)
+[GPIO Utility](http://wiringpi.com/the-gpio-utility/)
+
 ## Additional Information
 
 For more details about the gphoto2 package, [click here](http://www.gphoto.org/).
