@@ -198,10 +198,8 @@ cd /home/pi/WiringPi/gpio
 gpio allreadall
 gpio readall
 ```
-More information about these commands to test the GPIO pins can be found here:
-
-[WiringPi Pin Test](http://wiringpi.com/the-gpio-utility/pin-test/)
-
+More information about these commands to test the GPIO pins can be found here:   
+[WiringPi Pin Test](http://wiringpi.com/the-gpio-utility/pin-test/)  
 [WiringPi GPIO Utility](http://wiringpi.com/the-gpio-utility/)
 
 ## Additional Information
