@@ -15,30 +15,30 @@ function detections = detector(data_dir, index)
     figure
     imshow(img);
     I = imsubtract(bkg, img);
-    figure
     imtool(I);
 
     % Stretch contrast
     I = imadjust(I, ...
-        [0.20, 0.02, 0.02; 0.27, 0.27, 0.27], []);
+        [0.20, 0.03, 0.03; 0.27, 0.27, 0.27], [0, 0.75]);
     figure
     imshow(I);
    
     % Combine RGB values to generate 1D matrix
-    J = I(:,:,1) + I(:,:,2) + I(:,:,3);
-    figure
-    imshow(J);
-    
-    % Fill holes?
+    athresh = 95;
+    J = I(:,:,1) + I(:,:,2) + I(:,:,3) - athresh;
     J = imfill(J, 'holes');
+    figure
+    imshow(J)
     
     % Apply Gaussian blur
     % Higher sigma, higher blur
     J = imgaussfilt(J, .5);
+    figure
+    imshow(J)
     
     % Threshold value and amplify
-    bthresh = 5;
-    K = (J - bthresh) .^ 2;
+%     bthresh = 5;
+    K = (J - 50);
 %     figure
 %     imshow(K)
     
@@ -46,8 +46,8 @@ function detections = detector(data_dir, index)
     L = imgaussfilt(K, 2.5);
     
     % Threshold value without amplification
-    cthresh = 30;
-    L = L - cthresh;
+%     cthresh = 30;
+%     L = L - cthresh;
 %     figure
 %     imshow(L)
 
@@ -57,8 +57,8 @@ function detections = detector(data_dir, index)
 
     % Remove small artifacts
     N = bwareaopen(M, 225);
-%     figure
-%     imshow(N)
+    figure
+    imshow(N)
 
     % Label whitespace
     P = bwlabel(N);
