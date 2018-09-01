@@ -22,9 +22,17 @@ function detections = detector(data_dir, index)
         [0.20, 0.03, 0.03; 0.27, 0.27, 0.27], [0, 0.75]);
 %     figure
 %     imshow(I);
+    
+    % Segment color layers and threshold
+    red_thresh = 0.25;
+    green_thresh = 0.15;
+    blue_thresh = 0.20;
+    
+    I(:,:,1) = I(:,:,1) - red_thresh;
+    I(:,:,2) = I(:,:,2) - green_thresh;
+    I(:,:,3) = I(:,:,3) - blue_thresh;
    
-    % Combine RGB values to generate 1D matrix with thresholding
-    athresh = 95;
+    % Generate 1D matrix
     J = rgb2gray(I);
     J = imfill(J, 'holes');
 %     figure
@@ -32,12 +40,14 @@ function detections = detector(data_dir, index)
     
     % Apply Gaussian blur
     % Higher sigma, higher blur
-    J = imgaussfilt(J, .25);
+    J = double( imgaussfilt(J, .25) );
 %     figure
 %     imshow(J)
     
-    % Threshold value and amplify
-    K = J - 10;
+    % Threshold value and amplify by sigmoid
+    s = abs(4 - ( J ./ 32 ) );
+    t = exp(s) ./ ( exp(s) + 1);
+    K = uint8( J.*t );
 %     figure
 %     imshow(K)
     
