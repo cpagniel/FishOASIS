@@ -12,33 +12,32 @@ function detections = detector(data_dir, index)
     name = char(files(index).name);
     fprintf(strcat(name, '\n'));
     img = imread(name);
-    figure
-    imshow(img);
+%     figure
+%     imshow(img);
     I = imsubtract(bkg, img);
-    imtool(I);
+%     imtool(I);
 
     % Stretch contrast
     I = imadjust(I, ...
         [0.20, 0.03, 0.03; 0.27, 0.27, 0.27], [0, 0.75]);
-    figure
-    imshow(I);
+%     figure
+%     imshow(I);
    
-    % Combine RGB values to generate 1D matrix
+    % Combine RGB values to generate 1D matrix with thresholding
     athresh = 95;
-    J = I(:,:,1) + I(:,:,2) + I(:,:,3) - athresh;
+    J = rgb2gray(I);
     J = imfill(J, 'holes');
-    figure
-    imshow(J)
+%     figure
+%     imshow(J)
     
     % Apply Gaussian blur
     % Higher sigma, higher blur
-    J = imgaussfilt(J, .5);
-    figure
-    imshow(J)
+    J = imgaussfilt(J, .25);
+%     figure
+%     imshow(J)
     
     % Threshold value and amplify
-%     bthresh = 5;
-    K = (J - 50);
+    K = J - 10;
 %     figure
 %     imshow(K)
     
@@ -46,8 +45,8 @@ function detections = detector(data_dir, index)
     L = imgaussfilt(K, 2.5);
     
     % Threshold value without amplification
-%     cthresh = 30;
-%     L = L - cthresh;
+    cthresh = 30;
+    L = L - cthresh;
 %     figure
 %     imshow(L)
 
@@ -57,8 +56,8 @@ function detections = detector(data_dir, index)
 
     % Remove small artifacts
     N = bwareaopen(M, 225);
-    figure
-    imshow(N)
+%     figure
+%     imshow(N)
 
     % Label whitespace
     P = bwlabel(N);
