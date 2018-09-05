@@ -54,29 +54,28 @@ for h = 1:numel(day)
             
             if length(DATA.COUNT) == 76
                 iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-76)];
-            end
-            
-            if length(DATA.COUNT) == 79
+            elseif length(DATA.COUNT) == 79
                 iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-79)];
-            end
-            
-            if length(DATA.COUNT) == 91
+            elseif length(DATA.COUNT) == 91
                 iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-91)];
-            end
-            
-            if length(DATA.COUNT) == 94
+            elseif length(DATA.COUNT) == 94
                 iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-94)];
+            else
+                iDATA.(d{h}).count(i,:) = DATA.COUNT;                
             end
             
             if i == numel(day{h}.files)
                 iDATA.(d{h}).species = load('species.mat','sfull')';
             end
             
+            keyboard
+            
             clear DATA
             
         end
         
         disp(i)
+       
         
     end
     
