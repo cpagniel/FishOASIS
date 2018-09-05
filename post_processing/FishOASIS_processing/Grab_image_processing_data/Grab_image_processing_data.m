@@ -64,6 +64,10 @@ for h = 1:numel(day)
                 iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-91)];
             end
             
+            if length(DATA.COUNT) == 94
+                iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-94)];
+            end
+            
             if i == numel(day{h}.files)
                 iDATA.(d{h}).species = load('species.mat','sfull')';
             end
