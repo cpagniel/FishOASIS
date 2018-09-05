@@ -68,8 +68,6 @@ for h = 1:numel(day)
                 iDATA.(d{h}).species = load('species.mat','sfull')';
             end
             
-            keyboard
-            
             clear DATA
             
         end
