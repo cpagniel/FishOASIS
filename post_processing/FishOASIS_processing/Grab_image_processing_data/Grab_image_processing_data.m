@@ -50,7 +50,7 @@ for h = 1:numel(day)
             
             iDATA.(d{h}).date(i,1) = datenum(DATA.FILENAME(1:13),'yymmdd_HHMMSS');
             
-            max_snumb = 94; % as of 07052018
+            max_snumb = 113; % as of 09052018
             
             if length(DATA.COUNT) == 76
                 iDATA.(d{h}).count(i,:) = [DATA.COUNT,zeros(1,max_snumb-76)];
@@ -75,6 +75,8 @@ for h = 1:numel(day)
             clear DATA
             
         end
+        
+        disp(i)
         
     end
     
