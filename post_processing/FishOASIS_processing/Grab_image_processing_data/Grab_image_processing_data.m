@@ -44,6 +44,8 @@ for h = 1:numel(day)
         
         if strfind(day{h}.files(i).name,'CallLog')
             continue
+        elseif strfind(day{h}.files(i).name,'orig')
+            continue
         else
             
             load([day{h}.files(i).folder,'\',day{h}.files(i).name],'DATA');

@@ -45,6 +45,8 @@ for i = 1:length(file_data)
                 
                 if DATA.rect_WIDTH(j) > 0 && DATA.rect_HEIGHT(j) > 0
                     fish = imcrop(img,[DATA.XX1(j) DATA.YY1(j) DATA.rect_WIDTH(j) DATA.rect_HEIGHT(j)]);
+                elseif DATA.rect_WIDTH(j) == 0 || DATA.rect_HEIGHT(j) == 0
+                    continue
                 else
                     fish = imcrop(img,[DATA.XX1(j)+DATA.rect_WIDTH(j) DATA.YY1(j)+DATA.rect_HEIGHT(j) abs(DATA.rect_WIDTH(j)) abs(DATA.rect_HEIGHT(j))]);
                 end
