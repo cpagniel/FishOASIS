@@ -15,8 +15,9 @@
 clear
 
 fprintf('*** Welcome to the fish changer program! ***\n');
-prompt = 'Enter the .xls file:\n';
-filename = input(prompt, 's');
+prompt = 'Enter the .xlsx file';
+[filename,pathname] = uigetfile('.xlsx',prompt);
+cd(pathname)
 [num, txt, data] = xlsread(filename);
 fishID_data = data(:, 2:size(data,2));
 image_data = data(:,1);
@@ -27,8 +28,8 @@ for i = 1:size(data,1)
     image_full = strcat('20', image_data{i});
     image_date = strtok(image_full, '_');
     image_edit = strcat(image_date, ' - Edited');
-    image_path(:,:,i) = strcat('D:\2017_Camera_Data\2017\September-October\Edited\', image_edit, '\', image_data{i,1}, '.mat');
-    image_copy(:,:,i) = strcat('D:\2017_Camera_Data\2017\September-October\Edited\', image_edit, '\', image_data{i,1}, '_copy.mat');
+    image_path(:,:,i) = strcat('E:\2017_Camera_Data\2017\September-October\Edited\', image_edit, '\', image_data{i,1}, '.mat');
+    image_copy(:,:,i) = strcat('E:\2017_Camera_Data\2017\September-October\Edited\', image_edit, '\edit\', image_data{i,1}, '_copy.mat');
 end
 
 %% change values
