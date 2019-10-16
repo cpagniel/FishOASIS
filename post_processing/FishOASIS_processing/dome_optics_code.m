@@ -1,4 +1,5 @@
 %% Position and Size of Image Produced by Dome
+% https://www.scubageek.com/articles/wwwdome.html
 
 n = 1.33; % index of refraction in water
 np = 1.492; % index of refraction in dome
