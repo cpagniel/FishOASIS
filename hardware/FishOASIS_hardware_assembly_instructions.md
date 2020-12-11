@@ -8,6 +8,9 @@
 - solder to white connector plastic thingies (called Molex connectors)
 - could use 3 pin connector to power both instead of a 4 pin connector
 
+3M Scotchcast Flame-Retardant Electrical insulating Resin 2131
+Best how to video I could find: https://youtu.be/_HNsqACdmoc
+
 2. Battery Housing
 - gluing PVC, primer and cement glue
 - drill connector on plastic plate (tap & drill)
@@ -62,3 +65,8 @@ add molykote to bulkhead before connecting
 
 4. Building cement stand
 - drill holes into U post
+
+5. make camera battery
+
+red, 1 
+black 2
