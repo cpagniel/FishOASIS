@@ -22,6 +22,16 @@
 - 7.5 V for sony alpha camera, 5.2 V RPi set step-down converter
 - converter to bulkhead, white connector plastic thingies 
 
+
+Battery Pack:
+1+ 2- camera 7.9 v
+3+ 4- rpi 5.2 v
+
+draw a diagram of wiring (I really don't want to take one apart)
+check photos sent to Jack while building new pack
+
+
+
 2b. Mini-speaker
 
 - solder to Pi
