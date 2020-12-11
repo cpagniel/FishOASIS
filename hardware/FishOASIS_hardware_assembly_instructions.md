@@ -43,6 +43,8 @@ tutorial for working with wires: https://learn.sparkfun.com/tutorials/working-wi
 how to add pings to molex connector: https://youtu.be/h4xdpWOKBr0
 https://www.progressiveautomations.com/blogs/how-to/how-to-install-and-remove-molex-connectors
 
+grease o ring before deployment
+add molykote to bulkhead before connecting
 
 2b. Mini-speaker
 
