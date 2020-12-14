@@ -6,9 +6,9 @@ Instructions for hardware construction for FishOASIS.
 ### Parts List for Battery Pack
 
 | Name  | Part # | Quantity | Source |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | Standard-Wall Unthreaded Rigid PVC Pipe for Water  | 48925K18  | 1 | https://www.mcmaster.com/48925K18/
-| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
 
 ## Additional Information
 
