@@ -3,18 +3,33 @@ Instructions for hardware construction for FishOASIS.
 
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
-## Battery Pack & Connector
+## Battery Pack
+
+### Gluing PVC Battery Housing
+
+### Tap and Drill Bulkhead Connector into Acrylic Disk
+
+### Wiring the Battery Pack
+
+## In-Line Connector Between Battery Pack and Ikelite Housing
 
 ## Ikelite Housing
 
+### Tap and Drill Bulkhead Connector into Ikelite Housing
+
+### Attach Molex Connector to Bulkhead
+
+### Solder Micro-USB to Bulkhead 
+
 ## Modifications to Electronics
 
-## Additional Information
+### Attach Molex Connector to the Camera's Internal Battery
 
-For more details about the gphoto2 package, [click here](http://www.gphoto.org/).
-For more details about the wittyPi, [click here](http://www.uugear.com/doc/WittyPi2_UserManual.pdf).  
-For more details about the wiringPi package, [click here](http://wiringpi.com/).  
-For more details about the FishOASIS calibration code, [click here](https://computers.tutsplus.com/articles/creating-a-speaker-for-your-raspberry-pi-using-a-piezo-element--mac-59336) or [click here](https://developer-blog.net/raspberry-pi-pc-lautsprecher/).
+### Solder Miniature Speaker to RPi
+
+## Creating Cement Stand to Deploy Camera
+
+## Additional Information
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
