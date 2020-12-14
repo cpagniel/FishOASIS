@@ -20,6 +20,8 @@ Best how to video I could find: https://youtu.be/_HNsqACdmoc
 what size hole to drill into plate?
 maybe: H/16 ?? H3S ?? (look up specs of bulkheads)
 
+More on wiring: https://www.instructables.com/hack-that-battery-pack-also-a-small-lesson-in-/
+
 2a. Battery pack wiring
 - what is wiring?
 - 4 x 3 D battery per line in series = 18 V, 20 Amps/h
