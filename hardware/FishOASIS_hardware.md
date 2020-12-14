@@ -1,14 +1,13 @@
 # FishOASIS Hardware Construction
 Instructions for hardware construction for FishOASIS.
 
-## Battery Pack
+[Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
-### Parts List for Battery Pack
+## Battery Pack & Connector
 
-| Name  | Part # | Quantity | Source |
-| ------------- | ------------- | ------------- | ------------- |
-| Standard-Wall Unthreaded Rigid PVC Pipe for Water  | 48925K18  | 1 | https://www.mcmaster.com/48925K18/
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+## Ikelite Housing
+
+## Modifications to Electronics
 
 ## Additional Information
 
