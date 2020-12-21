@@ -13,11 +13,21 @@ Cut the PVC pipe to xxx meters long using a hacksaw or a PVC pipe cutter.
 
 Prime each end of the cut pipe. On one end, glue the PVC cap using the cement. On the other end, glue the union connector. A tutorial on how to prime and glue a PVC pipe can be found [here](https://www.youtube.com/watch?v=8kKVIoUhyYA&ab_channel=BenjaminSahlstrom).
 
-Your finalized battery housing should look like this:
+Once glued, your PVC tube with end cap and union connector should look like this:
 
-<img src="/hardware/images/battery_housing.png"> 
+<img src="/hardware/images/pvc_tube.png"> 
 
 ### Tap and Drill Bulkhead Connector into Acrylic Disk
+
+Using a benchtop drill press, drill a 25/64 hole into the acrylic disk. Then, run a 7/16-20 tap through the pre-drilled hole. A tutorial on how to tap and drill using a benchtop drill press can be found [here]().
+
+Grease the O-ring on the bulkheada connector using a silicone based grease and screw the bulkhead connector into place. The acrylic disk with bulkhead connector should look like this:
+
+<img src="/hardware/images/IMG_0113.heic"> <img src="/hardware/images/IMG_0114.heic"> <img src="/hardware/images/IMG_0115.heic"> 
+
+More information about the bulkhead connector can be found [here](https://www.macartney.com/what-we-offer/systems-and-products/connectors/subconn/subconn-micro-circular-series/subconn-micro-circular-2-3-4-5-6-and-8-contacts-and-g2-2-3-and-4-contacts/).
+
+### Attach Molex Connector to Bulkhead
 
 ### Wiring the Battery Pack
 
