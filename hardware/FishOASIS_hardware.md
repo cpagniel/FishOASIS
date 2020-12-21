@@ -15,7 +15,7 @@ Prime each end of the cut pipe. On one end, glue the PVC cap using the cement. O
 
 Your finalized battery housing should look like this:
 
-<img src="/hardware/images/battery_housing.png" width="40%"> 
+<img src="/hardware/images/battery_housing.png"> 
 
 ### Tap and Drill Bulkhead Connector into Acrylic Disk
 
