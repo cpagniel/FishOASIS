@@ -44,4 +44,4 @@ Your finalized battery housing should look like this:
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 12/14/2020
+Last Modification: 12/21/2020
