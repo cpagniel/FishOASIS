@@ -23,7 +23,7 @@ Using a benchtop drill press, drill a 25/64 hole into the acrylic disk. Then, ru
 
 Grease the O-ring on the bulkheada connector using a silicone based grease and screw the bulkhead connector into place. The acrylic disk with bulkhead connector should look like this:
 
-<img src="/hardware/images/IMG_0113.jpg" width="40%"> <img src="/hardware/images/IMG_0114.jpg" width="40%"> <img src="/hardware/images/IMG_0115.jpg" width="40%"> 
+<img src="/hardware/images/IMG_0113.jpg" width="30%"> <img src="/hardware/images/IMG_0114.jpg" width="30%"> <img src="/hardware/images/IMG_0115.jpg" width="30%"> 
 
 More information about the bulkhead connector can be found [here](https://www.macartney.com/what-we-offer/systems-and-products/connectors/subconn/subconn-micro-circular-series/subconn-micro-circular-2-3-4-5-6-and-8-contacts-and-g2-2-3-and-4-contacts/).
 
