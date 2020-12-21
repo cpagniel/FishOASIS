@@ -1,11 +1,13 @@
-# FishOASIS Hardware Construction
-Instructions for hardware construction for FishOASIS.
+# FishOASIS Camera Hardware Construction
+Instructions for hardware construction for FishOASIS camera.
 
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
 ## Battery Pack
 
 ### Gluing PVC Battery Housing
+
+[How to Prime & Glue PVC Pipe](https://www.youtube.com/watch?v=8kKVIoUhyYA&ab_channel=BenjaminSahlstrom)
 
 ### Tap and Drill Bulkhead Connector into Acrylic Disk
 
