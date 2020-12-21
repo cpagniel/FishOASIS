@@ -7,7 +7,9 @@ Instructions for hardware construction for FishOASIS camera.
 
 ### Gluing PVC Battery Housing
 
-[How to Prime & Glue PVC Pipe](https://www.youtube.com/watch?v=8kKVIoUhyYA&ab_channel=BenjaminSahlstrom)
+Cut the PVC pipe such that it is xxx meters long. Prime each end of the pipe. and then glue PVC cap and union connector on each end, respectively.
+
+A tutorial on how to prime and glue a PVC pipe can be found [here](https://www.youtube.com/watch?v=8kKVIoUhyYA&ab_channel=BenjaminSahlstrom).
 
 ### Tap and Drill Bulkhead Connector into Acrylic Disk
 
