@@ -17,7 +17,7 @@ Once glued, your PVC tube with end cap and union connector should look like this
 
 <img src="/hardware/images/pvc_tube.png"> 
 
-### Tap and Drill Bulkhead Connector into Acrylic Disk
+### Drill and Tap Hole for Bulkhead Connector into Acrylic Disk
 
 Using a benchtop drill press, drill a 25/64 hole into the acrylic disk. Then, run a 7/16-20 tap through the pre-drilled hole. A tutorial on how to tap and drill using a benchtop drill press can be found [here](https://www.youtube.com/watch?v=EGhjsAOjfzU&ab_channel=ElectricChronicles).
 
@@ -35,7 +35,7 @@ More information about the bulkhead connector can be found [here](https://www.ma
 
 ## Ikelite Housing
 
-### Tap and Drill Bulkhead Connector into Ikelite Housing
+### Drill and Tap Hole for Bulkhead Connector into Ikelite Housing
 
 ### Attach Molex Connector to Bulkhead
 
