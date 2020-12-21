@@ -19,7 +19,7 @@ Once glued, your PVC tube with end cap and union connector should look like this
 
 ### Tap and Drill Bulkhead Connector into Acrylic Disk
 
-Using a benchtop drill press, drill a 25/64 hole into the acrylic disk. Then, run a 7/16-20 tap through the pre-drilled hole. A tutorial on how to tap and drill using a benchtop drill press can be found [here]().
+Using a benchtop drill press, drill a 25/64 hole into the acrylic disk. Then, run a 7/16-20 tap through the pre-drilled hole. A tutorial on how to tap and drill using a benchtop drill press can be found [here](https://www.youtube.com/watch?v=EGhjsAOjfzU&ab_channel=ElectricChronicles).
 
 Grease the O-ring on the bulkheada connector using a silicone based grease and screw the bulkhead connector into place. The acrylic disk with bulkhead connector should look like this:
 
