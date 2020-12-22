@@ -41,7 +41,7 @@ Strip the ends of the four wires attached to the bulkhead connector. Crimp a pow
 <img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
 </p>
 
-Insert the crimped wires into the Molex connector using the following pin layout. Note, The wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
+Insert the crimped wires into the female end of the Molex connector using the following pin layout. Note, The wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
 
 <p align="center">
 <img src="/hardware/images/IMG_0117.jpg" width="40%">
@@ -85,10 +85,18 @@ Your battery pack should now look like this:
 <img src="/hardware/images/real_battery.jpg">
 </p>
 
-On one end of the battery pack, solder and heat shrink together the two negative wires (i.e., black wires) with a third black wires that is long enough to reach the other end of the battery pack. Repeat this for the positive wires. This combines two lines of battery holders (i.e., 2 x 12 D cells) in parallel.
+On one end of the battery pack, solder and heat shrink together the two negative (i.e., black) wires with a third black wires that is long enough to reach the other end of the battery pack. Repeat this for the positive (i.e., red) wires. This combines two lines of battery holders (i.e., 2 x 12 D cells) in parallel.
 
 <p align="center">
-<img src="/hardware/images/battery_parralel.png">
+<img src="/hardware/images/battery_parralel.png" width="50%">
+</p>
+
+At the other end of the battery pack, solder and heat shrink together the two negatives (i.e., black) wires from the battery holders, the third long black wire from the opposite end of the battery pack and two additional black wires at least 12 inches long. This will connect all four lines of battery holders (i.e., 4 x 12 D cells) in parallel and will provide two outputs to be connected to step-down converters. Repeat this for the positive (i.e., red) wires. 
+
+<p align="center">
+<img src="/hardware/images/battery_wiring_all.png" width="50%">
+  
+<img src="/hardware/images/IMG_3555.JPG" width="50%">
 </p>
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
