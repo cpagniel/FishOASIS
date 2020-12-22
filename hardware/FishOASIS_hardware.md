@@ -29,6 +29,14 @@ More information about the bulkhead connector can be found [here](https://www.ma
 
 ### Attach Molex Connector to Bulkhead
 
+Strip the ends of the four wires attached to the bulkhead. Crimp a power connector pin (i.e., male end) to each of the four wires. 
+
+<img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
+
+
+
+A tutorial on how to crimp the power connector to the wires and how to install a Molex connector can be found [here](https://www.progressiveautomations.com/blogs/how-to/how-to-install-and-remove-molex-connectors). A short video can be found [here](https://www.youtube.com/watch?v=h4xdpWOKBr0&feature=youtu.be&ab_channel=SteinAir) as well.
+
 ### Wiring the Battery Pack
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
