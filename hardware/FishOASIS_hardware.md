@@ -57,9 +57,7 @@ First, connect 4 battery holders (i.e., 12 D cells) in series by soldering the p
 
 <p align="center">
 <img src="/hardware/images/battery_holder_series.png">
-</p>
 
-<p align="center">
 <img src="/hardware/images/IMG_3554.JPG" width="40%">
 </p>
 
@@ -94,9 +92,7 @@ On one end of the battery pack, solder and heat shrink together the two negative
 At the other end of the battery pack, solder and heat shrink together the two negatives (i.e., black) wires from the battery holders, the third long black wire from the opposite end of the battery pack and two additional black wires at least 12 inches long. This will connect all four lines of battery holders (i.e., 4 x 12 D cells) in parallel and will provide two outputs to be connected to step-down converters. Repeat this for the positive (i.e., red) wires. 
 
 <p align="center">
-<img src="/hardware/images/battery_wiring_all.png" width="50%">
-  
-<img src="/hardware/images/IMG_3555.JPG" width="50%">
+<img src="/hardware/images/battery_wiring_all.png" width="50%"> <img src="/hardware/images/IMG_3555.JPG" width="30%">
 </p>
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
