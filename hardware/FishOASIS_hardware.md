@@ -35,13 +35,13 @@ More information about the bulkhead connector can be found [here](https://www.ma
 
 ### Attach Molex Connector to Bulkhead
 
-Strip the ends of the four wires attached to the bulkhead. Crimp a power connector pin (i.e., male end) to each of the four wires. 
+Strip the ends of the four wires attached to the bulkhead connector. Crimp a power connector pin (i.e., male end) to each of the four wires. 
 
 <p align="center">
 <img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
 </p>
 
-Insert the crimped wires into the Molex connector using the following pin layout. The wires on the bulkhead are labeled with numbers and correspond to the numbering used below. Note, you can use any pin layout as long as it is consistent across all of the wiring.
+Insert the crimped wires into the Molex connector using the following pin layout. Note, The wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
 
 <p align="center">
 <img src="/hardware/images/IMG_0117.jpg" width="40%">
