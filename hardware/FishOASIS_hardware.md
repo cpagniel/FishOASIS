@@ -33,7 +33,9 @@ Strip the ends of the four wires attached to the bulkhead. Crimp a power connect
 
 <img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
 
+Insert the crimped wires into the Molex connector using the following pin layout. Note, you can use any pin layout as long as it is consistent across all of the wiring.
 
+<img src="/hardware/images/IMG_0117.jpg" width="40%">
 
 A tutorial on how to crimp the power connector to the wires and how to install a Molex connector can be found [here](https://www.progressiveautomations.com/blogs/how-to/how-to-install-and-remove-molex-connectors). A short video can be found [here](https://www.youtube.com/watch?v=h4xdpWOKBr0&feature=youtu.be&ab_channel=SteinAir) as well.
 
