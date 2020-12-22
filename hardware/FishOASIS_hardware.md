@@ -51,9 +51,9 @@ A tutorial on how to crimp the power connector to the wires and how to install a
 
 ### Wiring the Battery Pack
 
-To build the battery pack, you will need to solder wires together and cover the connections with heat shrink tubing. Here are a few tutorials on [how to work with wires](https://learn.sparkfun.com/tutorials/working-with-wire) (including stripping, splicing, etc.), [how to solder](https://www.makerspaces.com/how-to-solder/) and [how to use heat shrink tubing](https://www.ifixit.com/Guide/How+to+Use+Heat+Shrink+Tubing/64041). Here is also a brief tutorial on [working with batteries](https://www.instructables.com/hack-that-battery-pack-also-a-small-lesson-in-/).
+To build the 720 Wh battery pack, you will need to solder wires together and cover the connections with heat shrink tubing. Here are a few tutorials on [how to work with wires](https://learn.sparkfun.com/tutorials/working-with-wire) (including stripping, splicing, etc.), [how to solder](https://www.makerspaces.com/how-to-solder/) and [how to use heat shrink tubing](https://www.ifixit.com/Guide/How+to+Use+Heat+Shrink+Tubing/64041). Here is also a brief tutorial on [working with batteries](https://www.instructables.com/hack-that-battery-pack-also-a-small-lesson-in-/).
 
-First, connect 4 battery holders in series by soldering the positive end of one battery holder to the negative end of another (i.e., red to black wire). Cover these connections with heat shrink tubing. Repeat this an additional 3 times. Secure adjacent battery holders with small zip ties.
+First, connect 4 battery holders (i.e., 12 D cells) in series by soldering the positive end of one battery holder to the negative end of another (i.e., red to black wire). Cover these connections with heat shrink tubing. Repeat this an additional 3 times. Secure adjacent battery holders with small zip ties.
 
 <p align="center">
 <img src="/hardware/images/battery_holder_series.png">
@@ -83,6 +83,12 @@ Your battery pack should now look like this:
 <img src="/hardware/images/battery_combine.png" width="50%">
 
 <img src="/hardware/images/real_battery.jpg">
+</p>
+
+On one end of the battery pack, solder and heat shrink together the two negative wires (i.e., black wires) with a third black wires that is long enough to reach the other end of the battery pack. Repeat this for the positive wires. This combines two lines of battery holders (i.e., 2 x 12 D cells) in parallel.
+
+<p align="center">
+<img src="/hardware/images/battery_parralel.png">
 </p>
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
