@@ -77,6 +77,14 @@ Place the two stacks (i.e., two lines of 4 battery holders stacked vertically) s
 <img src="/hardware/images/battery_all_stack.png">
 </p>
 
+Your battery pack should now look like this:
+
+<p align="center">
+<img src="/hardware/images/battery_combine.png">
+
+<img src="/hardware/images/real_battery.jpg">
+</p>
+
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
 ## Ikelite Housing
