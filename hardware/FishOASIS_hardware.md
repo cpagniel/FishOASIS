@@ -51,6 +51,14 @@ A tutorial on how to crimp the power connector to the wires and how to install a
 
 ### Wiring the Battery Pack
 
+To build the battery pack, you will need to solder wires together and cover the connections with heat shrink tubing. Here are a few tutorials on [how to work with wires](https://learn.sparkfun.com/tutorials/working-with-wire) (including stripping, splicing, etc.), [how to solder](https://www.makerspaces.com/how-to-solder/) and [how to use heat shrink tubing](https://www.ifixit.com/Guide/How+to+Use+Heat+Shrink+Tubing/64041). Here is also a brief tutorial on [working with batteries](https://www.instructables.com/hack-that-battery-pack-also-a-small-lesson-in-/).
+
+First, connect 4 battery holders in series by soldering the positive end of one battery holder to the negative end of another (i.e., red to black wire). Cover these connections with heat shrink tubing. Repeat this an additional 3 times. 
+
+<p align="center">
+<img src="/hardware/images/battery_holder_series.png" width="50%">
+</p>
+
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
 ## Ikelite Housing
