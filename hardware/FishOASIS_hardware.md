@@ -1,7 +1,7 @@
 # FishOASIS Camera Hardware Construction
 Instructions for hardware construction for FishOASIS camera.
 
-<img src="/hardware/images/Camera_System.png" width="40%"> 
+<img src="/hardware/images/Camera_System.png" width="50%" align="center"> 
 
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
@@ -15,7 +15,7 @@ Prime each end of the cut pipe. On one end, glue the PVC cap using the cement. O
 
 Once glued, your PVC tube with end cap and union connector should look like this:
 
-<img src="/hardware/images/pvc_tube.png"> 
+<img src="/hardware/images/pvc_tube.png" align="center"> 
 
 ### Drill and Tap Hole for Bulkhead Connector into Acrylic Disk
 
@@ -23,7 +23,7 @@ Using a benchtop drill press, drill a 25/64 hole into the center of the acrylic 
 
 Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place. The acrylic disk with bulkhead connector should look like this:
 
-<img src="/hardware/images/IMG_0113.jpg" width="30%"> <img src="/hardware/images/IMG_0114.jpg" width="30%"> <img src="/hardware/images/IMG_0115.jpg" width="30%"> 
+<img src="/hardware/images/IMG_0113.jpg" width="30%" align="center"> <img src="/hardware/images/IMG_0114.jpg" width="30%" align="center"> <img src="/hardware/images/IMG_0115.jpg" width="30%" align="center"> 
 
 More information about the bulkhead connector can be found [here](https://www.macartney.com/what-we-offer/systems-and-products/connectors/subconn/subconn-micro-circular-series/subconn-micro-circular-2-3-4-5-6-and-8-contacts-and-g2-2-3-and-4-contacts/).
 
@@ -31,11 +31,11 @@ More information about the bulkhead connector can be found [here](https://www.ma
 
 Strip the ends of the four wires attached to the bulkhead. Crimp a power connector pin (i.e., male end) to each of the four wires. 
 
-<img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
+<img src="/hardware/images/IMG_0188.jpg" width="40%" align="center"> <img src="/hardware/images/IMG_0189.jpg" width="40%" align="center">
 
 Insert the crimped wires into the Molex connector using the following pin layout. Note, you can use any pin layout as long as it is consistent across all of the wiring.
 
-<img src="/hardware/images/IMG_0117.jpg" width="40%">
+<img src="/hardware/images/IMG_0117.jpg" width="40%" align="center">
 
 A tutorial on how to crimp the power connector to the wires and how to install a Molex connector can be found [here](https://www.progressiveautomations.com/blogs/how-to/how-to-install-and-remove-molex-connectors). A short video can be found [here](https://www.youtube.com/watch?v=h4xdpWOKBr0&feature=youtu.be&ab_channel=SteinAir) as well.
 
