@@ -71,6 +71,12 @@ Stack two lines of 4 battery holders as shown below:
 
 Connect the two lines with small screws and washers through small openings at the end of each battery holders as shown above.
 
+Place the two stacks (i.e., two lines of 4 battery holders stacked vertically) side-by-side as follows:
+
+<p align="center">
+<img src="/hardware/images/battery_all_stack.png">
+</p>
+
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
 ## Ikelite Housing
