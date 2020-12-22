@@ -41,7 +41,7 @@ Strip the ends of the four wires attached to the bulkhead. Crimp a power connect
 <img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
 </p>
 
-Insert the crimped wires into the Molex connector using the following pin layout. Note, you can use any pin layout as long as it is consistent across all of the wiring.
+Insert the crimped wires into the Molex connector using the following pin layout. The wires on the bulkhead are labeled with numbers and correspond to the numbering used below. Note, you can use any pin layout as long as it is consistent across all of the wiring.
 
 <p align="center">
 <img src="/hardware/images/IMG_0117.jpg" width="40%">
@@ -74,4 +74,4 @@ A tutorial on how to crimp the power connector to the wires and how to install a
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 12/21/2020
+Last Modification: 12/22/2020
