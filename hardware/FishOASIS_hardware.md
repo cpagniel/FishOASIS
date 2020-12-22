@@ -60,7 +60,7 @@ First, connect 4 battery holders in series by soldering the positive end of one 
 </p>
 
 <p align="center">
-<img src="/hardware/images/IMG_3554.jpg" width="40%">
+<img src="/hardware/images/IMG_3554.JPG" width="40%">
 </p>
 
 Stack two lines of 4 battery holders as shown below:
