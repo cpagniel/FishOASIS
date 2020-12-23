@@ -41,7 +41,7 @@ Strip the ends of the four wires attached to the bulkhead connector. Crimp a pow
 <img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
 </p>
 
-Insert the crimped wires into the female end of the Molex connector using the following pin layout. Note, The wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
+Insert the crimped wires into the female end of the Molex connector using the following pin layout. Note, the wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
 
 <p align="center">
 <img src="/hardware/images/IMG_0117.jpg" width="40%">
@@ -95,11 +95,23 @@ At the other end of the battery pack, solder and heat shrink together the two ne
 <img src="/hardware/images/battery_wiring_all.png" width="50%"> <img src="/hardware/images/IMG_3555.JPG" width="30%">
 </p>
 
-Pair one of the black wires with one of the red wires. These two pairs will be the input into two step-down converters. Solder the black wire from the battery pack to the IN - input of the step-down converter. Solder the paired red wire from the battery pack to the IN + input of the step-down converter. Repeat this for the second pair of wires and the second step-down converter.
+Pair one of the black wires with one of the red wires. These two pairs will be the input into two step-down converters. Solder the black wire from the battery pack to the IN - input of the step-down converter. Solder the paired red wire from the battery pack to the IN + input of the step-down converter. 
 
 <p align="center">
 <img src="/hardware/images/step-down_converter.jpg">
 </p>
+
+Solder a red wire to the OUT + output of the step-down converter. Solder a black wire to the OUT - output of the step-down converter. Crimp a power connector sleeve (i.e., female end) to the other end of these wires. 
+
+Set the voltage of one step-down converter to 5.2 V. This is to power the Raspberry Pi single-board computer. [Here is a short video on how to adjust the voltage of the step-down converter].(https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN)
+
+Insert the red crimped wire into position 3 of the male end of the Molex connector and the black crimped wire into position 4 using the following pin layout. 
+
+<p align="center">
+<img src="/hardware/images/battery_molex_layout.jpg">
+</p>
+
+Repeat the two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. This is to power the Sony alpha 7s ii camera. Insert the red crimped wire into position 1 and the black crimped wire into position 2.
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
