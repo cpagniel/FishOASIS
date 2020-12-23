@@ -95,6 +95,12 @@ At the other end of the battery pack, solder and heat shrink together the two ne
 <img src="/hardware/images/battery_wiring_all.png" width="50%"> <img src="/hardware/images/IMG_3555.JPG" width="30%">
 </p>
 
+Pair one of the black wires with one of the red wires. These two pairs will be the input into two step-down converters. Solder the black wire from the battery pack to the IN - input of the step-down converter. Solder the paired red wire from the battery pack to the IN + input of the step-down converter. Repeat this for the second pair of wires and the second step-down converter.
+
+<p align="center">
+<img src="/hardware/images/IMG_0121.jpg" width="50%">
+</p>
+
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
 ## Ikelite Housing
