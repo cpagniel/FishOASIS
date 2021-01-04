@@ -136,4 +136,4 @@ Repeat the two steps above for the second step-down converter. However, this tim
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 12/22/2020
+Last Modification: 01/04/2020
