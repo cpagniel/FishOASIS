@@ -103,7 +103,7 @@ Pair one of the black wires with one of the red wires. These two pairs will be t
 
 Solder a red wire to the OUT + output of the step-down converter. Solder a black wire to the OUT - output of the step-down converter. Crimp a power connector sleeve (i.e., female end) to the other end of these wires. 
 
-Set the voltage of one step-down converter to 5.2 V. This is to power the Raspberry Pi single-board computer. [Here is a short video on how to adjust the voltage of the step-down converter].(https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN)
+Set the voltage of one step-down converter to 5.2 V. This is to power the Raspberry Pi single-board computer. [Here is a short video on how to adjust the voltage of the step-down converter](https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN).
 
 Insert the red crimped wire into position 3 of the male end of the Molex connector and the black crimped wire into position 4 using the following pin layout. 
 
