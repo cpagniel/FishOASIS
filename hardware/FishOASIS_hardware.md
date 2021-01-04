@@ -108,7 +108,7 @@ Set the voltage of one step-down converter to 5.2 V. This is to power the Raspbe
 Insert the red crimped wire into position 3 of the male end of the Molex connector and the black crimped wire into position 4 using the following pin layout. 
 
 <p align="center">
-<img src="/hardware/images/battery_molex_layout.jpg">
+<img src="/hardware/images/battery_molex_layout.jpg" width="40%">
 </p>
 
 Repeat the two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. This is to power the Sony alpha 7s ii camera. Insert the red crimped wire into position 1 and the black crimped wire into position 2.
