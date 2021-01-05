@@ -111,10 +111,18 @@ Set the voltage of one step-down converter to 5.2 V. [Here is a short video on h
 
 Repeat the last two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. Insert the red crimped wire into position 1 and the black crimped wire into position 2 of the male end of the Molex connector. This is to power the Sony alpha 7s ii camera. 
 
-To test the wiring of the battery pack, fill one line of 4 battery holders with 12 D cells. The lights on both step-down converters should be illuminated as shown below. You can test the output voltage from each step-down converter is 5.2 V and 7.9 V, respectively. Repeat this for all four lines of battery holders individually.
+To test the wiring of the battery pack, fill one line of 4 battery holders with 12 D cells. The lights on both step-down converters should be illuminated as shown below. You can measure the output voltage from each step-down converter with a multimeter to confirm that they are 5.2 V and 7.9 V, respectively. Repeat this for all four lines of battery holders individually.
 
 <p align="center">
 <img src="/hardware/images/IMG_0105.jpg" width="40%">
+</p>
+
+### Deployment 
+
+To prepare the battery pack for deployment, insert 48 D cells into the battery holders and connect the male end of the Molex connector attached to the battery holders to the female end of the Molex connector. Grease the large O-ring of the socket-connect end of the union connector glued to the PVC pipe, place the acrylic disk with the bulkhead connector on top of it and screw on the threaded union connector center. Use a strap wrench to tighten the connection.
+
+<p align="center">
+<img src="/hardware/images/IMG_0126.jpg" width="40%">
 </p>
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
@@ -140,4 +148,4 @@ To test the wiring of the battery pack, fill one line of 4 battery holders with 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 01/04/2020
+Last Modification: 01/05/2020
