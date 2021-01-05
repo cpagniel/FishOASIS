@@ -12,8 +12,7 @@ Instructions for hardware construction for FishOASIS camera.
 [In-Line Connector](#connector)  
 [Ikelite Housing](#housing)  
 [Modifications to Electronics](#electronics)  
-[Cement Stand for Deployment](#stand)  
-
+[Cement Stand for Deployment](#stand)
 
 <a name="batterypack"/>
 ## Battery Pack
