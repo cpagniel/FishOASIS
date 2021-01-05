@@ -90,13 +90,13 @@ Your battery pack should now look like this:
 <img src="/hardware/images/real_battery.jpg">
 </p>
 
-On one end of the battery pack, solder and heat shrink together the two negative (i.e., black) wires with a third black wires that is long enough to reach the other end of the battery pack. Repeat this for the positive (i.e., red) wires. This combines two lines of battery holders (i.e., 2 x 12 D cells) in parallel.
+On one end of the battery pack, solder and heat shrink together the two negative (i.e., black) wires with a third 20 AWG black wire that is long enough to reach the other end of the battery pack. Repeat this for the positive (i.e., red) wires. This combines two lines of battery holders (i.e., 2 x 12 D cells) in parallel.
 
 <p align="center">
 <img src="/hardware/images/battery_parralel.png" width="50%">
 </p>
 
-At the other end of the battery pack, solder and heat shrink together the two negatives (i.e., black) wires from the battery holders, the third long black wire from the opposite end of the battery pack and two additional black wires at least 12 inches long. This will connect all four lines of battery holders (i.e., 4 x 12 D cells) in parallel and will provide two outputs to be connected to two step-down converters, respectively. Repeat this for the positive (i.e., red) wires. 
+At the other end of the battery pack, solder and heat shrink together the two negatives (i.e., black) wires from the battery holders, the third 20 AWG long black wire from the opposite end of the battery pack and two additional 20 AWG black wires at least 12 inches long. This will connect all four lines of battery holders (i.e., 4 x 12 D cells) in parallel and will provide two outputs to be connected to two step-down converters, respectively. Repeat this for the positive (i.e., red) wires. 
 
 <p align="center">
 <img src="/hardware/images/battery_wiring_all.png" width="50%"> <img src="/hardware/images/IMG_3555.JPG" width="30%">
@@ -133,6 +133,40 @@ To prepare the battery pack for deployment, insert 48 D cells into the battery h
 </p>
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
+
+Cut an 8-inch long clear PETG tube and drill two holes into the tube:
+
+<p align="center">
+<img src="/hardware/images/IMG_0136.jpg" width="40%">
+</p>
+
+Thread a female locking sleeve onto each micro in-line connector. Thread the cut clear PETG tube onto one of the micro in-line connector.
+
+<p align="center">
+<img src="/hardware/images/IMG_0131.jpg" width="40%">
+</p>
+
+Solder the four wires of the micro in-line connectors together based on color (i.e., white to white, green to green, etc.) and cover the soldered wires with heat shrink tubing. Move the clear PETG tube over the heat shrink tubing and tape the ends of the clear PETG tube to the micro in-line connector. 
+
+<p align="center">
+<img src="/hardware/images/IMG_0137.jpg" width="40%"> <img src="/hardware/images/IMG_0138.jpg" width="40%">
+</p>
+
+Check for electrical continuity between the connections. 
+
+Pour the cable insulating resin flame retardant (also known as scotchcast) into the clear PETG tube. Here is a tutorial on [how to use resin](https://www.youtube.com/watch?v=_HNsqACdmoc&feature=youtu.be). The resin will waterproof this connection between the micro in-line connectors. Cover the in-line connector with abrasion-resistant expandable sleeving, covering the ends with electrical tape to keep the sleeving in place.
+
+<p align="center">
+<img src="/hardware/images/IMG_0130.jpg" width="40%">
+</p>
+
+Check again for electrical continuity between the connections.
+
+One end of the in-line connector will be the connection to the battery pack while the other end will be the connection to the Ikelite housing. Before connecting the female in-line connector to the male bulkhead connector, add Molykote to the female in-line connector.
+
+<p align="center">
+<img src="/hardware/images/IMG_0139.jpg" width="40%">
+</p>
 
 ## Ikelite Housing
 
