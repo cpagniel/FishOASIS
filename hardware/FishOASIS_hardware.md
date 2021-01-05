@@ -25,7 +25,7 @@ Once glued, your PVC tube with end cap and union connector should look like this
 
 Using a benchtop drill press, drill a 25/64 hole into the center of the acrylic disk. Then, run a 7/16-20 tap through the pre-drilled hole. A tutorial on how to drill and tap a hole using a benchtop drill press can be found [here](https://www.youtube.com/watch?v=EGhjsAOjfzU&ab_channel=ElectricChronicles).
 
-Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place. The acrylic disk with bulkhead connector should look like this:
+Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place as tight as possible. The acrylic disk with bulkhead connector should look like this:
 
 <p align="center">
 <img src="/hardware/images/IMG_0113.jpg" width="30%"> <img src="/hardware/images/IMG_0114.jpg" width="30%"> <img src="/hardware/images/IMG_0115.jpg" width="30%"> 
@@ -67,9 +67,9 @@ Stack two lines of 4 battery holders as shown below:
 <img src="/hardware/images/battery_stack.png">
 </p>
 
-Connect the two lines with small screws and washers through small openings at the end of each battery holders as shown above.
+Connect the two lines with small screws and washers through the small openings at the end of each battery holders as shown above.
 
-Place the two stacks (i.e., two lines of 4 battery holders stacked vertically) side-by-side as follows:
+Place the two stacks (i.e., two lines of 4 battery holders stacked vertically) side-by-side and tape them together as follows:
 
 <p align="center">
 <img src="/hardware/images/battery_all_stack.png">
@@ -89,13 +89,13 @@ On one end of the battery pack, solder and heat shrink together the two negative
 <img src="/hardware/images/battery_parralel.png" width="50%">
 </p>
 
-At the other end of the battery pack, solder and heat shrink together the two negatives (i.e., black) wires from the battery holders, the third long black wire from the opposite end of the battery pack and two additional black wires at least 12 inches long. This will connect all four lines of battery holders (i.e., 4 x 12 D cells) in parallel and will provide two outputs to be connected to step-down converters. Repeat this for the positive (i.e., red) wires. 
+At the other end of the battery pack, solder and heat shrink together the two negatives (i.e., black) wires from the battery holders, the third long black wire from the opposite end of the battery pack and two additional black wires at least 12 inches long. This will connect all four lines of battery holders (i.e., 4 x 12 D cells) in parallel and will provide two outputs to be connected to two step-down converters, respectively. Repeat this for the positive (i.e., red) wires. 
 
 <p align="center">
 <img src="/hardware/images/battery_wiring_all.png" width="50%"> <img src="/hardware/images/IMG_3555.JPG" width="30%">
 </p>
 
-Pair one of the black wires with one of the red wires. These two pairs will be the input into two step-down converters. Solder the black wire from the battery pack to the IN - input of the step-down converter. Solder the paired red wire from the battery pack to the IN + input of the step-down converter. 
+Pair one of the black wires with one of the red wires. These two pairs of wires will be the input into two step-down converters. Solder the black wire from the battery pack to the IN - input of the step-down converter. Solder the corresponding red wire from the battery pack to the IN + input of the step-down converter. 
 
 <p align="center">
 <img src="/hardware/images/step-down_converter.jpg">
@@ -103,15 +103,19 @@ Pair one of the black wires with one of the red wires. These two pairs will be t
 
 Solder a red wire to the OUT + output of the step-down converter. Solder a black wire to the OUT - output of the step-down converter. Crimp a power connector sleeve (i.e., female end) to the other end of these wires. 
 
-Set the voltage of one step-down converter to 5.2 V. This is to power the Raspberry Pi single-board computer. [Here is a short video on how to adjust the voltage of the step-down converter](https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN).
-
-Insert the red crimped wire into position 3 of the male end of the Molex connector and the black crimped wire into position 4 using the following pin layout. 
+Set the voltage of one step-down converter to 5.2 V. [Here is a short video on how to adjust the voltage of the step-down converter](https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN). Insert the red crimped wire into position 3 of the male end of the Molex connector and the black crimped wire into position 4 using the following pin layout. This is to power the Raspberry Pi single-board computer.
 
 <p align="center">
 <img src="/hardware/images/battery_molex_layout.jpg" width="40%">
 </p>
 
-Repeat the two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. This is to power the Sony alpha 7s ii camera. Insert the red crimped wire into position 1 and the black crimped wire into position 2.
+Repeat the last two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. Insert the red crimped wire into position 1 and the black crimped wire into position 2 of the male end of the Molex connector. This is to power the Sony alpha 7s ii camera. 
+
+To test the wiring of the battery pack, fill one line of 4 battery holders with 12 D cells. The lights on both step-down converters should be illuminated as shown below. You can test the output voltage from each step-down converter is 5.2 V and 7.9 V, respectively. Repeat this for all four lines of battery holders individually.
+
+<p align="center">
+<img src="/hardware/images/IMG_0105.jpg" width="40%">
+</p>
 
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
