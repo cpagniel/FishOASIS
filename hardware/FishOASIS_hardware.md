@@ -14,6 +14,8 @@ Instructions for hardware construction for FishOASIS camera.
 [Modifications to Electronics](#heading-3)  
 [Cement Stand for Deployment](#heading-4)
 
+<!-- toc -->
+
 ## Battery Pack
 
 ### Gluing PVC Battery Housing
