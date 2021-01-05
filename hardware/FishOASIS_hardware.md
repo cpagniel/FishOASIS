@@ -9,10 +9,10 @@ Instructions for hardware construction for FishOASIS camera.
 
 ## Table of Contents
 [Battery Pack](#battery-pack)  
-[In-Line Connector](#heading-1)  
-[Ikelite Housing](#heading-2)  
-[Modifications to Electronics](#heading-3)  
-[Cement Stand for Deployment](#heading-4)
+[In-Line Connector](#in-line-connector-between-battery-pack-and-ikelite-housing)  
+[Ikelite Housing](#ikelite-housing)  
+[Modifications to Electronics](#modifications-to-electronics)  
+[Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)
 
 ## Battery Pack
 
