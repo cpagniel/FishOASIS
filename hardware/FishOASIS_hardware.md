@@ -7,13 +7,13 @@ Instructions for hardware construction for FishOASIS camera.
 
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+[Battery Pack](#batterypack)  
+[In-Line Connector](#connector)  
+[Ikelite Housing](#housing)
+[Modifications to Electronics](#electronics)
+[Cement Stand for Deployment](#stand)
 
+<a name="batterypack"/>
 ## Battery Pack
 
 ### Gluing PVC Battery Housing
@@ -132,8 +132,10 @@ To prepare the battery pack for deployment, insert 48 D cells into the battery h
 <img src="/hardware/images/IMG_0126.jpg" width="40%">
 </p>
 
+<a name="connector"/>
 ## In-Line Connector Between Battery Pack and Ikelite Housing
 
+<a name="housing"/>
 ## Ikelite Housing
 
 ### Drill and Tap Hole for Bulkhead Connector into Ikelite Housing
@@ -142,12 +144,14 @@ To prepare the battery pack for deployment, insert 48 D cells into the battery h
 
 ### Solder Micro-USB to Bulkhead 
 
+<a name="electronics"/>
 ## Modifications to Electronics
 
 ### Attach Molex Connector to the Camera's Internal Battery
 
 ### Solder Miniature Speaker to RPi
 
+<a name="stand"/>
 ## Creating Cement Stand to Deploy Camera
 
 ## Additional Information
