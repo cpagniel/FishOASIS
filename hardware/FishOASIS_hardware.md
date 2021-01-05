@@ -172,6 +172,8 @@ One end of the in-line connector will be the connection to the battery pack whil
 
 ### Drill and Tap Hole for Bulkhead Connector into Ikelite Housing
 
+
+
 ### Attach Molex Connector to Bulkhead
 
 ### Solder Micro-USB to Bulkhead 
@@ -183,8 +185,6 @@ One end of the in-line connector will be the connection to the battery pack whil
 ### Solder Miniature Speaker to RPi
 
 ## Creating Cement Stand to Deploy Camera
-
-## Additional Information
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
