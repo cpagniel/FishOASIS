@@ -7,14 +7,13 @@ Instructions for hardware construction for FishOASIS camera.
 
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
-# Table of Contents
+## Table of Contents
 [Battery Pack](#batterypack)  
 [In-Line Connector](#connector)  
 [Ikelite Housing](#housing)  
 [Modifications to Electronics](#electronics)  
 [Cement Stand for Deployment](#stand)
 
-<a name="batterypack"/>
 ## Battery Pack
 
 ### Gluing PVC Battery Housing
