@@ -141,7 +141,7 @@ Thread a female locking sleeve onto each micro in-line connector. Thread the cut
 Solder the four wires of the micro in-line connectors together based on color (i.e., white to white, green to green, etc.) and cover the soldered wires with heat shrink tubing. Move the clear PETG tube over the heat shrink tubing and tape the ends of the clear PETG tube to the micro in-line connector. 
 
 <p align="center">
-<img src="/hardware/images/IMG_0137.jpg" width="40%"> <img src="/hardware/images/IMG_0138.jpg" width="40%">
+<img src="/hardware/images/IMG_0138.jpg" width="40%"> <img src="/hardware/images/IMG_0137.jpg" width="40%">
 </p>
 
 Check for electrical continuity between the connections. 
@@ -163,6 +163,8 @@ One end of the in-line connector will be the connection to the battery pack whil
 ## Ikelite Housing
 
 ### Drill and Tap Hole for Bulkhead Connector into Ikelite Housing
+
+Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelite Housing. Then, run a 7/16-20 tap through the pre-drilled hole. Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place as tight as possible.
 
 
 
