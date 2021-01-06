@@ -1,37 +1,29 @@
 # FishOASIS Camera Hardware Construction
 Instructions for hardware construction for FishOASIS camera.
 
-| Components |  |
-| ------------- | ------------- |
-| [Battery Pack](#battery-pack)  | <img src="/hardware/images/Camera_System.png" width="50%" align="left">  |
-| [In-Line Connector](#in-line-connector-between-battery-pack-and-ikelite-housing)   |    |
-| [Ikelite Housing](#ikelite-housing)   |    |
-| [Modifications to Electronics](#modifications-to-electronics)  |    |
-| [Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)   |    |
-
 <table>
     <thead>
         <tr>
-            <th>Layer 1</th>
-            <th>Layer 2</th>
-            <th>Layer 3</th>
+            <th>Components</th>
+            <th> </th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>L1 Name</td>
-            <td rowspan=2>L2 Name A</td>
-            <td>L3 Name A</td>
+            <td>[Battery Pack](#battery-pack) </td>
+            <td rowspan=5><img src="/hardware/images/Camera_System.png" width="50%" align="left"></td>
         </tr>
         <tr>
-            <td>L3 Name B</td>
+            <td>[In-Line Connector](#in-line-connector-between-battery-pack-and-ikelite-housing)</td>
         </tr>
         <tr>
-            <td rowspan=2>L2 Name B</td>
-            <td>L3 Name C</td>
+            <td>[Ikelite Housing](#ikelite-housing)</td>
         </tr>
         <tr>
-            <td>L3 Name D</td>
+            <td>[Modifications to Electronics](#modifications-to-electronics)</td>
+        </tr>
+        <tr>
+            <td>[Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)</td>
         </tr>
     </tbody>
 </table>
