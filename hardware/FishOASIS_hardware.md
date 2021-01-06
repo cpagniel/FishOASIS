@@ -1,32 +1,13 @@
 # FishOASIS Camera Hardware Construction
 Instructions for hardware construction for FishOASIS camera.
 
-<table>
-    <thead>
-        <tr>
-            <th>Components</th>
-            <th> </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>[Battery Pack](#battery-pack) </td>
-            <td rowspan=5><img src="/hardware/images/Camera_System.png" width="50%" align="left"></td>
-        </tr>
-        <tr>
-            <td>[In-Line Connector](#in-line-connector-between-battery-pack-and-ikelite-housing)</td>
-        </tr>
-        <tr>
-            <td>[Ikelite Housing](#ikelite-housing)</td>
-        </tr>
-        <tr>
-            <td>[Modifications to Electronics](#modifications-to-electronics)</td>
-        </tr>
-        <tr>
-            <td>[Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)</td>
-        </tr>
-    </tbody>
-</table>
+[Battery Pack](#battery-pack)  
+[In-Line Connector](#in-line-connector-between-battery-pack-and-ikelite-housing)  
+[Ikelite Housing](#ikelite-housing)  
+[Modifications to Electronics](#modifications-to-electronics)  
+[Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)
+
+<img src="/hardware/images/Camera_System.png" width="50%" align="left">
  
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
