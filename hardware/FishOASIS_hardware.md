@@ -7,7 +7,7 @@ Instructions for hardware construction for FishOASIS camera.
 [Modifications to Electronics](#modifications-to-electronics)  
 [Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)
 
-<img src="/hardware/images/Camera_System.png" width="50%" align="left">
+<img src="/hardware/images/Camera_System.png" width="50%">
  
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
@@ -180,4 +180,4 @@ Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelit
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 01/05/2020
+Last Modification: 01/06/2020
