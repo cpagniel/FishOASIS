@@ -9,3 +9,7 @@ Specific instructions on how to assemble the hardware components of the FishOASI
 ## Software
 
 Specific instructions on how to install the software required for FishOASIS camera on the Raspberry Pi A+ can be found [here](/software/FishOASIS_software.md).
+
+## Deployment
+
+Specific instructions on how to assemble the components of the FishOASIS camera for deployment can be found [here](/deployment/FishOASIS_deployment.md).
