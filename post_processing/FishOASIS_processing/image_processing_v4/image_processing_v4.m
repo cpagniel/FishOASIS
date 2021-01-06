@@ -93,7 +93,7 @@ PARAMS.hicomments=uicontrol(MAIN.hf1,'style','edit','un','n','pos',[0.7 0.01 0.3
 
 if ~isfield(PARAMS,'ifile')
     
-    [PARAMS.ifile,PARAMS.idir] = uigetfile([pwd '\*.jpg'],'Select Image File');
+    [PARAMS.ifile,PARAMS.idir] = uigetfile(pwd,'Select Image File');
     PARAMS.ipath = [PARAMS.idir PARAMS.ifile];
     
     if PARAMS.ifile ~= 0
@@ -153,7 +153,7 @@ set(MAIN.ha2,'YTickLabel',[])
 MAIN.xxx=[MAIN.xlim0(1) MAIN.xlim0(1) MAIN.xlim0(2) MAIN.xlim0(2) MAIN.xlim0(1)];
 MAIN.yyy=[MAIN.ylim0(1) MAIN.ylim0(2) MAIN.ylim0(2) MAIN.ylim0(1) MAIN.ylim0(1)];
 
-MAIN.hl1=line(MAIN.xxx,MAIN.yyy,'color',[0 1 0],'linewidth',4,'erasemode','none');
+MAIN.hl1=line(MAIN.xxx,MAIN.yyy,'color',[0 1 0],'linewidth',4);
 
 axes(MAIN.ha1);
 
