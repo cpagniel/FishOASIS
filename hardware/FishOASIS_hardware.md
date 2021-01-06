@@ -8,6 +8,15 @@ Instructions for hardware construction for FishOASIS camera.
 | [Ikelite Housing](#ikelite-housing)   |    |
 | [Modifications to Electronics](#modifications-to-electronics)  |    |
 | [Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)   |    |
+
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         || 
  
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
 
