@@ -7,19 +7,9 @@ Instructions for hardware construction for FishOASIS camera.
 [Modifications to Electronics](#modifications-to-electronics)  
 [Cement Stand for Deployment](#creating-cement-stand-to-deploy-camera)
 
-<p align="left">
-<img src="/hardware/images/Camera_System.png" width="50%">
-</p>
+<img src="/hardware/images/Camera_System.png" width="50%" align="left">
 
 [Click here](link to xls file in github) to download the parts list for FishOASIS camera.
-
-[column grid="4" span="1"]Some content[/column]
-
-[column grid="4" span="1"]Some content[/column]
-
-[column grid="4" span="1"]Some content[/column]
-
-[column grid="4" span="1"]Some content[/column]
 
 ## Battery Pack
 
