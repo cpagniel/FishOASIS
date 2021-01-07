@@ -180,6 +180,12 @@ Strip the ends of the four wires attached to the bulkhead connector. Crimp a pow
 
 ### Solder Micro-USB to Bulkhead Connector
 
+Cut and remove the USB end of the USB/micro USB right angle cable. Solder the red wire of the micro USB right angle cable to wire 3 of the bulkhead connector. Solder the black wire of the micro USB right angle cable to wire 4 of the bulkhead connector. Cover these connections with heat shrink tubbing.
+
+<p align="center">
+<img src="/hardware/images/IMG_0160.jpg" width="40%">
+</p>
+
 ### Remove Foam Backing and Cut Camera Tray
 
 Remove the foam backing from the back plate of the Ikelite housing.
@@ -188,7 +194,7 @@ Remove the foam backing from the back plate of the Ikelite housing.
 <img src="/hardware/images/IMG_0144.jpg" width="40%"> <img src="/hardware/images/IMG_0152.jpg" width="40%">
 </p>
 
-Unscrew the camera tray from inside the Ikelite housing. Cut a 1-inch by 0.5-inch rectangle into the first two, thick plastic layers of the camera tray in the bottom, right corner. This creates an opening to allow the wires from the camera battery to be connected to the Molex connector from the bulkhead connector.
+Unscrew the camera tray from inside the Ikelite housing. Cut a 1-inch by 0.5-inch rectangle into the first two, thick plastic layers of the camera tray in the bottom, right corner using a hand saw. This creates an opening to allow the wires from the camera battery to be connected to the Molex connector from the bulkhead connector.
 
 <p align="center">
 <img src="/hardware/images/IMG_0154.jpg" width="40%"> <img src="/hardware/images/IMG_0155.jpg" width="40%">
