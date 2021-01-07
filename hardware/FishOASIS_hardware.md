@@ -39,7 +39,7 @@ Grease the O-ring on the bulkhead connector using a silicone-based grease and sc
 
 More information about the bulkhead connector can be found [here](https://www.macartney.com/what-we-offer/systems-and-products/connectors/subconn/subconn-micro-circular-series/subconn-micro-circular-2-3-4-5-6-and-8-contacts-and-g2-2-3-and-4-contacts/).
 
-### Attach Molex Connector to Bulkhead
+### Attach Molex Connector to Bulkhead Connector
 
 Strip the ends of the four wires attached to the bulkhead connector. Crimp a power connector pin (i.e., male end) to each of the four wires. 
 
@@ -165,15 +165,29 @@ One end of the in-line connector will be the connection to the battery pack whil
 
 Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelite Housing. Then, run a 7/16-20 tap through the pre-drilled hole. Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place as tight as possible.
 
+<p align="center">
+<img src="/hardware/images/IMG_0145.jpg" width="40%"> <img src="/hardware/images/IMG_0148.jpg" width="40%">
+</p>
+
+### Attach Molex Connector to Bulkhead Connector
 
 
-### Attach Molex Connector to Bulkhead
 
-### Solder Micro-USB to Bulkhead 
+### Solder Micro-USB to Bulkhead Connector
 
-### Cut Camera Tray
+### Remove Foam Backing and Cut Camera Tray
 
+Remove the foam backing from the back plate of the Ikelite housing.
 
+<p align="center">
+<img src="/hardware/images/IMG_0144.jpg" width="40%"> <img src="/hardware/images/IMG_0152.jpg" width="40%">
+</p>
+
+Unscrew the camera tray from inside the Ikelite housing. Cut a 1-inch by 0.5-inch rectangle into the first two, thick plastic layers of the camera tray in the bottom, right corner. This creates an opening to allow the wires from the camera battery to be connected to the Molex connector from the bulkhead connector.
+
+<p align="center">
+<img src="/hardware/images/IMG_0154.jpg" width="40%"> <img src="/hardware/images/IMG_0155.jpg" width="40%">
+</p>
 
 ## Modifications to Electronics
 
@@ -186,4 +200,4 @@ Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelit
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
-Last Modification: 01/06/2020
+Last Modification: 01/07/2020
