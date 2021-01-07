@@ -11,7 +11,7 @@ Instructions for hardware construction for FishOASIS camera.
 <img src="/hardware/images/Camera_System.png" width="50%">
 </p>
 
-[Click here](link to xls file in github) to download the parts list for FishOASIS camera.
+[Click here](/hardware/FishOASIS_camera_parts_2017.xlsx) to download the parts list for FishOASIS camera.
 
 ## Battery Pack
 
@@ -207,9 +207,9 @@ To secure the miniature speaker, add a small piece of velcro to the right side o
 
 ### Attach Molex Connector to the Camera's Internal Battery
 
-### Solder Miniature Speaker to RPi
 
-## Creating Cement Stand to Deploy Camera
+
+### Solder Miniature Speaker to RPi
 
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
