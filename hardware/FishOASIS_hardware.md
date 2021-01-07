@@ -47,7 +47,7 @@ Strip the ends of the four wires attached to the bulkhead connector. Crimp a pow
 <img src="/hardware/images/IMG_0188.jpg" width="40%"> <img src="/hardware/images/IMG_0189.jpg" width="40%">
 </p>
 
-Insert the crimped wires into the female end of the Molex connector using the following pin layout. Note, the wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
+Insert the crimped wires into the female end of the 6-pin Molex connector using the following pin layout. Note, the wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
 
 <p align="center">
 <img src="/hardware/images/IMG_0117.jpg" width="40%">
@@ -109,13 +109,13 @@ Pair one of the black wires with one of the red wires. These two pairs of wires 
 
 Solder a red wire to the OUT + output of the step-down converter. Solder a black wire to the OUT - output of the step-down converter. Crimp a power connector sleeve (i.e., female end) to the other end of these wires. 
 
-Set the voltage of one step-down converter to 5.2 V. [Here is a short video on how to adjust the voltage of the step-down converter](https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN). Insert the red crimped wire into position 3 of the male end of the Molex connector and the black crimped wire into position 4 using the following pin layout. This is to power the Raspberry Pi single-board computer.
+Set the voltage of one step-down converter to 5.2 V. [Here is a short video on how to adjust the voltage of the step-down converter](https://www.youtube.com/watch?v=QPntXt8Ea3s&ab_channel=POWERGEN). Insert the red crimped wire into position 3 of the male end of the 6-pin Molex connector and the black crimped wire into position 4 using the following pin layout. This is to power the Raspberry Pi single-board computer.
 
 <p align="center">
 <img src="/hardware/images/battery_molex_layout.jpg" width="40%">
 </p>
 
-Repeat the last two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. Insert the red crimped wire into position 1 and the black crimped wire into position 2 of the male end of the Molex connector. This is to power the Sony alpha 7s ii camera. 
+Repeat the last two steps above for the second step-down converter. However, this time, set the voltage of the step-down converter to 7.9 V. Insert the red crimped wire into position 1 and the black crimped wire into position 2 of the male end of the 6-pin Molex connector. This is to power the Sony alpha 7s ii camera. 
 
 To test the wiring of the battery pack, fill one line of 4 battery holders with 12 D cells. The lights on both step-down converters should be illuminated as shown below. You can measure the output voltage from each step-down converter with a multimeter to confirm that they are 5.2 V and 7.9 V, respectively. Repeat this for all four lines of battery holders individually.
 
@@ -166,12 +166,16 @@ One end of the in-line connector will be the connection to the battery pack whil
 Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelite Housing. Then, run a 7/16-20 tap through the pre-drilled hole. Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place as tight as possible.
 
 <p align="center">
-<img src="/hardware/images/IMG_0145.jpg" width="40%"> <img src="/hardware/images/IMG_0148.jpg" width="40%">
+<img src="/hardware/images/IMG_0145.jpg" width="30%"> <img src="/hardware/images/IMG_0148.jpg" width="30%"> <img src="/hardware/images/IMG_0157.jpg" width="30%">
 </p>
 
 ### Attach Molex Connector to Bulkhead Connector
 
+Strip the ends of the four wires attached to the bulkhead connector. Crimp a power connector pins (i.e., male end) to wires 1 and 2. Insert the crimped wires into the female end of the 2-pin Molex connector using the following pin layout. Note, the wires on the bulkhead connector are labeled with numbers and correspond to the numbering used below. 
 
+<p align="center">
+<img src="/hardware/images/IMG_0159.jpg" width="40%">
+</p>
 
 ### Solder Micro-USB to Bulkhead Connector
 
