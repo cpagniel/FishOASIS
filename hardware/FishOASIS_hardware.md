@@ -140,7 +140,7 @@ Thread a female locking sleeve onto each micro in-line connector. Thread the cut
 Solder the four wires of the micro in-line connectors together based on color (i.e., white to white, green to green, etc.) and cover the soldered wires with heat shrink tubing. Move the clear PETG tube over the heat shrink tubing and tape the ends of the clear PETG tube to the micro in-line connector. 
 
 <p align="center">
-<img src="/hardware/images/IMG_0138.jpg" width="40%"> <img src="/hardware/images/IMG_0137.jpg" width="40%">
+<img src="/hardware/images/IMG_0137.jpg" width="40%"> <img src="/hardware/images/IMG_0138.jpg" width="40%">
 </p>
 
 Check for electrical continuity between the connections. 
