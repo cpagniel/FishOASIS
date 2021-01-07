@@ -166,7 +166,8 @@ One end of the in-line connector will be the connection to the battery pack whil
 Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelite Housing. Then, run a 7/16-20 tap through the pre-drilled hole. Grease the O-ring on the bulkhead connector using a silicone-based grease and screw the bulkhead connector into place as tight as possible.
 
 <p align="center">
-<img src="/hardware/images/IMG_0145.jpg" width="30%"> <img src="/hardware/images/IMG_0148.jpg" width="30%"> <img src="/hardware/images/IMG_0157.jpg" width="30%">
+<img src="/hardware/images/IMG_0145.jpg" width="40%"> <img src="/hardware/images/IMG_0148.jpg" width="40%"> 
+<img src="/hardware/images/IMG_0157.jpg" width="30%">
 </p>
 
 ### Attach Molex Connector to Bulkhead Connector
