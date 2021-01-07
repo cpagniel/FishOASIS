@@ -1,10 +1,12 @@
-# FishOASIS Assembly for Deployment 
+# Preparation for FishOASIS Camera Deployment 
 
-## Camera, Single-Board Computer and Storage
+## Creating Cement Stand to Deploy Camera
 
 ## Camera Settings
 
 Instructions on how to set camera settings can be found [here](/deployment/FishOASIS_camera_settings.md).
+
+## Inserting Camera, Single-Board Computer, USB Storage, etc. into Ikelite Housing
 
 ## Battery Pack
 
