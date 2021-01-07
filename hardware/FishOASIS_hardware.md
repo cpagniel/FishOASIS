@@ -171,6 +171,10 @@ Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelit
 
 ### Solder Micro-USB to Bulkhead 
 
+### Cut Camera Tray
+
+
+
 ## Modifications to Electronics
 
 ### Attach Molex Connector to the Camera's Internal Battery
