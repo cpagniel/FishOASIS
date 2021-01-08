@@ -236,6 +236,14 @@ Screw the plastic camera mount from the Ikelite housing onto the bottom of the c
 
 ### Solder Miniature Speaker to RPi
 
+Solder one wire of the miniature speaker to GPIO Pin 3 (i.e., 8th pin down on the left) on the underside of the RPi. Solder the other wire of the miniature speaker to the ground pin (i.e., 3rd pin down on the right) on the underside of the RPi.
+
+<p align="center">
+<img src="/hardware/images/IMG_0178.jpg" width="40%"> <img src="/hardware/images/IMG_0174.jpg" width="40%">
+</p>
+
+[Here is a guide to the GPIO pins for the Raspberry Pi A+](https://pi4j.com/1.2/pins/model-a-plus.html).
+
 ## Author
 Camille Pagniello (cpagniel@ucsd.edu)
 
