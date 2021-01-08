@@ -168,6 +168,7 @@ Using a benchtop drill press, drill a 25/64 hole into the flat top of the Ikelit
 
 <p align="center">
 <img src="/hardware/images/IMG_0145.jpg" width="40%"> <img src="/hardware/images/IMG_0148.jpg" width="40%"> 
+
 <img src="/hardware/images/IMG_0157.jpg" width="30%">
 </p>
 
@@ -207,7 +208,31 @@ To secure the miniature speaker, add a small piece of velcro to the right side o
 
 ### Attach Molex Connector to the Camera's Internal Battery
 
+Cut and remove the end of the dummy battery as shown below:
 
+<p align="center">
+<img src="/hardware/images/dummy_battery_cut.jpg" width="40%">
+</p>
+
+Crimp a power connector sleeve (i.e., female end) to each wire. Insert the red crimped wire into position 1 of the male end of the 2-pin Molex connector and the black crimped wire into position 2 using the following pin layout. 
+
+<p align="center">
+<img src="/hardware/images/IMG_0170.jpg" width="40%">
+  
+<img src="/hardware/images/IMG_0168.jpg" width="40%">
+</p>
+
+Remove plastic tab from camera battery door to make room for the battery output wire.
+
+<p align="center">
+<img src="/hardware/images/IMG_0166.jpg" width="40%">
+</p>
+
+Screw the plastic camera mount from the Ikelite housing onto the bottom of the camera.
+
+<p align="center">
+<img src="/hardware/images/IMG_0173.jpg" width="40%"> <img src="/hardware/images/IMG_0167.jpg" width="40%">
+</p>
 
 ### Solder Miniature Speaker to RPi
 
