@@ -6,6 +6,14 @@
 
 Instructions on how to set camera settings can be found [here](/deployment/FishOASIS_camera_settings.md).
 
+## Attach Camera Dome and Extension to Ikelite Housing
+
+Grease the two O-rings of the 3.5 inch extension. Screw the extension into the camera dome. Use the four port locks to attached the extension and dome port to the front of the Ikelite housing.
+
+<p align="center">
+<img src="/hardware/images/IMG_0181.jpg" width="50%">
+</p>
+
 ## Inserting Electronics into Ikelite Housing
 
 Insert dummy battery into camera. Tape over the screen of the camera to protect it from scratching from the RPi.
