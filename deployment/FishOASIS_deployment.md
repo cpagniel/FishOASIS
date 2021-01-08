@@ -51,3 +51,4 @@ To prepare the battery pack for deployment, insert 48 D cells into the battery h
 </p>
 
 ## Connect Battery Pack to Ikelite Housing using In-Line Connector
+
