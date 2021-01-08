@@ -52,3 +52,14 @@ To prepare the battery pack for deployment, insert 48 D cells into the battery h
 
 ## Connect Battery Pack to Ikelite Housing using In-Line Connector
 
+Fill the holes of the in-line connector with a bit of Molykote. 
+
+<p align="center">
+<img src="/hardware/images/IMG_0129.jpg" width="40%">
+</p>
+
+Attach the in-line connector to the bulkhead on the battery pack first. Then, attach the other end on the in-line connector to the bulkhead on the Ikelite housing. As soon as a connection is made with the Ikelite housing (even if the in-line connector is not fully seated), the RPi and camera should power on and start a cycle (i.e., a cycle = RPi startup, play calibration tones via miniature speaker, take 12 images (1 image every 5 seconds),  pause for 30 seconds, take 12 images (1 image every 5 seconds), RPi shutdown). Note, the camera remains on at all times. However, when it is in sleep mode (i.e., which activates about 5 minutes after the last image was taken), no power is consumed.
+
+<p align="center">
+<img src="/hardware/images/IMG_0184.jpg" width="40%">
+</p>
