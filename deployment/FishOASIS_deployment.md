@@ -26,7 +26,7 @@ Connect the male end of the Molex connector attached to the dummy battery of the
 <img src="/hardware/images/IMG_0171.jpg" width="50%">
 </p>
 
-Insert the camera into the camera tray in the Ikelite housing. Place the USB hub on the lefthand side of the Ikelite housing and the RPi behind the camera.
+Insert the camera into the camera tray in the Ikelite housing. Place the USB hub on the lefthand side of the Ikelite housing and the RPi behind the camera. Plug the right angle micro USB attached to the bulkhead connector into the RPi.
 
 <p align="center">
 <img src="/hardware/images/IMG_0143.jpg" width="50%">
@@ -41,3 +41,5 @@ To prepare the battery pack for deployment, insert 48 D cells into the battery h
 <p align="center">
 <img src="/hardware/images/IMG_0126.jpg" width="40%">
 </p>
+
+## Connect Battery Pack to Ikelite Housing using In-Line Connector
