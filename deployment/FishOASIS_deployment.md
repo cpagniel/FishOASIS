@@ -2,6 +2,14 @@
 
 ## Creating Cement Stand to Deploy Camera
 
+Pour a 50 x 50 x 10 cm concrete block. While the concrete is still wet, add a 1-m tall u-post set in the middle and at least two eye bolts. The eye bolts enable the battery pack to be zip tied to the concrete block. 
+
+Once the concrete is set, drill two holes into the u-post. Use the [base of the Ikelite housing](https://www.ikelite.com/collections/arms-trays/products/base-for-dl-and-fl-housings) as a guide. Attaching the camera in this setup will enable portrait images. For landscape images, attach an L-bracket to the u-post. 
+
+<p align="center">
+<img src="/hardware/images/GPTempDownload11_edited.jpg" width="50%"> <img src="/hardware/images/GPTempDownload13_edited.jpg" width="50%">
+</p>
+
 ## Camera Settings
 
 Instructions on how to set camera settings can be found [here](/deployment/FishOASIS_camera_settings.md).
