@@ -13,7 +13,3 @@ Specific instructions on how to install the software required for FishOASIS came
 ## Deployment
 
 Specific instructions on how to prepare the FishOASIS camera for deployment can be found [here](/deployment/FishOASIS_deployment.md).
-
-## Post-Processing Software
-
-Miscellaneous Matlab-based post-processing software to enable image annotation.
