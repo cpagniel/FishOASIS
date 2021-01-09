@@ -1,4 +1,4 @@
-# FishOASIS 
+# FishOASIS Camera
 
 This repository contains instructions on how to build the camera of FishOASIS (Fish Optical and passive Acoustic Sensor Identification System).
 
