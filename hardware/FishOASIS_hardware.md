@@ -10,7 +10,7 @@ Instructions for hardware construction for FishOASIS camera.
 <img src="/hardware/images/Camera_System.png" width="50%">
 </p>
 
-[Click here](/hardware/FishOASIS_camera_parts_2017.xlsx) to download the original parts list for FishOASIS camera.
+[Click here](/hardware/FishOASIS_camera_parts_2017.xlsx) to download the original parts list for FishOASIS camera.  
 [Click here](/hardware/FishOASIS_camera_parts_2021.xlsx) to download an updated parts list (03/11/2021).
 
 ## Battery Pack
